@@ -44,5 +44,5 @@
     "p-is-promise": "^3.0.0",
     "tmp": "^0.2.1"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/keystone"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/keystone"
 }

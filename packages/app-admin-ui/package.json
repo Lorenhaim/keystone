@@ -1,5 +1,5 @@
 {
-  "name": "@keystonejs/app-admin-ui",
+  "name": "@koikorn/app-admin-ui",
   "description": "KeystoneJS Admin UI App.",
   "version": "7.0.5",
   "author": "The KeystoneJS Development Team",
@@ -87,5 +87,5 @@
     "webpack-dev-middleware": "^3.7.2",
     "webpack-hot-middleware": "^2.25.0"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/app-admin-ui"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/app-admin-ui"
 }
