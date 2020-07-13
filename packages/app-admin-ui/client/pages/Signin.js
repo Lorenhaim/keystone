@@ -10,7 +10,7 @@ import { PageTitle } from '@arch-ui/typography';
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
-import { upcase } from '@keystonejs/utils';
+import { upcase } from '@koikorn/utils';
 
 import KeystoneLogo from '../components/KeystoneLogo';
 

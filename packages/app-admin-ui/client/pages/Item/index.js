@@ -18,7 +18,7 @@ import {
   omitBy,
   captureSuspensePromises,
   countArrays,
-} from '@keystonejs/utils';
+} from '@koikorn/utils';
 
 import CreateItemModal from '../../components/CreateItemModal';
 import DeleteItemModal from '../../components/DeleteItemModal';

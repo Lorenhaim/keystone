@@ -31,7 +31,7 @@ import Pagination, { getPaginationLabel } from './Pagination';
 import Search from './Search';
 import Management, { ManageToolbar } from './Management';
 import { useListFilter, useListSelect, useListSort, useListUrlState } from './dataHooks';
-import { captureSuspensePromises } from '@keystonejs/utils';
+import { captureSuspensePromises } from '@koikorn/utils';
 
 import { useAdminMeta } from '../../providers/AdminMeta';
 

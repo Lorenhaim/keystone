@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-import { arrayToObject, mapKeys, omit } from '@keystonejs/utils';
+import { arrayToObject, mapKeys, omit } from '@koikorn/utils';
 
 export const gqlCountQueries = lists => gql`{
   ${lists.map(list => list.countQuery()).join('\n')}
