@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import { memo } from 'react';
 
-import { ChevronLeftIcon } from '@primer/octicons-react';
+import { ChevronLeftIcon } from '@arch-ui/icons';
 import { FlexGroup } from '@arch-ui/layout';
 import { IconButton } from '@arch-ui/button';
 import { gridSize } from '@arch-ui/theme';
@@ -21,8 +21,9 @@ const Container = ({ children }) => {
   return <div css={{ paddingLeft: padding, paddingRight: padding }}>{children}</div>;
 };
 
-export const ItemTitle = memo(function ItemTitle({ titleText }) {
+export const ItemTitle = memo(function ItemTitle({ titleText, adminPath }) {
   const { list } = useList();
+  const listHref = `${adminPath}/${list.path}`;
   const { itemHeaderActions } = useUIHooks();
   return (
     <Container>
@@ -33,7 +34,7 @@ export const ItemTitle = memo(function ItemTitle({ titleText }) {
           <IconButton
             variant="subtle"
             icon={ChevronLeftIcon}
-            to={list.getFullPersistentPath()}
+            to={listHref}
             css={{ marginLeft: -12 }}
           >
             {list.label}

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { FoldIcon, KebabVerticalIcon, UnfoldIcon, ZapIcon } from '@primer/octicons-react';
+import { FoldIcon, KebabVerticalIcon, UnfoldIcon, ZapIcon } from '@arch-ui/icons';
 import { CONTAINER_GUTTER, CONTAINER_WIDTH } from '@arch-ui/layout';
 import { A11yText } from '@arch-ui/typography';
 import { IconButton } from '@arch-ui/button';
@@ -9,14 +9,14 @@ import { useMeasure } from '@arch-ui/hooks';
 
 import { useReset } from './dataHooks';
 
-const dropdownTarget = props => (
+let dropdownTarget = props => (
   <IconButton {...props} variant="nuance" icon={KebabVerticalIcon} id="ks-list-dropdown">
     <A11yText>Show more...</A11yText>
   </IconButton>
 );
 
 export function MoreDropdown({ listKey, measureRef, isFullWidth, onFullWidthToggle }) {
-  const { width } = useMeasure(measureRef);
+  let { width } = useMeasure(measureRef);
   const onReset = useReset(listKey);
   const TableIcon = isFullWidth ? FoldIcon : UnfoldIcon;
   const tableToggleIsAvailable = width > CONTAINER_WIDTH + CONTAINER_GUTTER * 2;

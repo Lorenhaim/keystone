@@ -1,27 +1,21 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Fragment, useState, memo, useEffect } from 'react';
+import styled from '@emotion/styled';
 import { Button, LoadingButton } from '@arch-ui/button';
 import { colors, gridSize } from '@arch-ui/theme';
 import { alpha } from '@arch-ui/color-utils';
 
-import { useList } from '../../providers/List';
-
-const Toolbar = props => (
-  <div
-    css={{
-      backgroundColor: alpha('#fff', 0.93),
-      bottom: 0,
-      boxShadow: `${alpha(colors.text, 0.1)} 0px -2px 0px`,
-      display: 'flex',
-      justifyContent: 'space-between',
-      paddingBottom: gridSize * 2,
-      paddingTop: gridSize * 2,
-      position: 'sticky',
-    }}
-    {...props}
-  />
-);
+const Toolbar = styled.div({
+  backgroundColor: alpha('#fff', 0.93),
+  bottom: 0,
+  boxShadow: `${alpha(colors.text, 0.1)} 0px -2px 0px`,
+  display: 'flex',
+  justifyContent: 'space-between',
+  paddingBottom: gridSize * 2,
+  paddingTop: gridSize * 2,
+  position: 'sticky',
+});
 
 function useKeyListener(listener, deps) {
   useEffect(() => {
@@ -77,40 +71,38 @@ function Reset({ canReset, onReset }) {
   );
 }
 
-export default memo(
-  ({ onSave, onDelete, canReset, updateInProgress, onReset, hasWarnings, hasErrors }) => {
-    const { list } = useList();
-    const cypressId = 'item-page-save-button';
+export default memo(function Footer(props) {
+  const { onSave, onDelete, canReset, updateInProgress, onReset, hasWarnings, hasErrors } = props;
+  const cypressId = 'item-page-save-button';
 
-    return (
-      <Fragment>
-        <Toolbar key="footer">
-          <div css={{ display: 'flex', alignItems: 'center' }}>
-            <LoadingButton
-              appearance={hasWarnings && !hasErrors ? 'warning' : 'primary'}
-              id={cypressId}
-              isDisabled={updateInProgress || hasErrors || !list.access.update}
-              isLoading={updateInProgress}
-              onClick={onSave}
-              style={{ marginRight: 8 }}
-              type="submit"
-            >
-              {hasWarnings && !hasErrors ? 'Ignore Warnings and Save Changes' : 'Save Changes'}
-            </LoadingButton>
-            <Reset canReset={canReset} onReset={onReset} />
-          </div>
-          <div>
-            <Button
-              appearance="danger"
-              isDisabled={updateInProgress || !list.access.delete}
-              variant="nuance"
-              onClick={onDelete}
-            >
-              Delete
-            </Button>
-          </div>
-        </Toolbar>
-      </Fragment>
-    );
-  }
-);
+  return (
+    <Fragment>
+      <Toolbar key="footer">
+        <div css={{ display: 'flex', alignItems: 'center' }}>
+          <LoadingButton
+            appearance={hasWarnings && !hasErrors ? 'warning' : 'primary'}
+            id={cypressId}
+            isDisabled={updateInProgress || hasErrors}
+            isLoading={updateInProgress}
+            onClick={onSave}
+            style={{ marginRight: 8 }}
+            type="submit"
+          >
+            {hasWarnings && !hasErrors ? 'Ignore Warnings and Save Changes' : 'Save Changes'}
+          </LoadingButton>
+          <Reset canReset={canReset} onReset={onReset} />
+        </div>
+        <div>
+          <Button
+            appearance="danger"
+            isDisabled={updateInProgress}
+            variant="nuance"
+            onClick={onDelete}
+          >
+            Delete
+          </Button>
+        </div>
+      </Toolbar>
+    </Fragment>
+  );
+});

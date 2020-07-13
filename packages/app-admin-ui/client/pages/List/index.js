@@ -2,13 +2,16 @@
 
 import { jsx } from '@emotion/core';
 import { Fragment, useEffect, Suspense } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useQuery } from '@apollo/react-hooks';
+import { useList } from '../../providers/List';
 
+import { IconButton } from '@arch-ui/button';
+import { PlusIcon } from '@arch-ui/icons';
 import { Container, FlexGroup } from '@arch-ui/layout';
 import { colors, gridSize } from '@arch-ui/theme';
 import { PageTitle } from '@arch-ui/typography';
 import { Button } from '@arch-ui/button';
-import { KebabHorizontalIcon } from '@primer/octicons-react';
+import { KebabHorizontalIcon } from '@arch-ui/icons';
 import Tooltip from '@arch-ui/tooltip';
 import { applyRefs } from 'apply-ref';
 import { LoadingIndicator } from '@arch-ui/loading';
@@ -27,28 +30,65 @@ import SortPopout from './SortSelect';
 import Pagination, { getPaginationLabel } from './Pagination';
 import Search from './Search';
 import Management, { ManageToolbar } from './Management';
-import { useListFilter, useListSort, useListUrlState } from './dataHooks';
+import { useListFilter, useListSelect, useListSort, useListUrlState } from './dataHooks';
 import { captureSuspensePromises } from '@keystonejs/utils';
-import { useList } from '../../providers/List';
-import { useUIHooks } from '../../providers/Hooks';
-import CreateItem from './CreateItem';
+
+import { useAdminMeta } from '../../providers/AdminMeta';
 
 export function ListLayout(props) {
-  const { items, itemCount, queryErrors, query } = props;
+  const { items, itemCount, queryErrors, routeProps, query } = props;
+  const { list, openCreateItemModal } = useList();
+  const { urlState } = useListUrlState(list.key);
+  const { filters } = useListFilter(list.key);
+  const [sortBy, handleSortChange] = useListSort(list.key);
 
-  const { list, selectedItems, setSelectedItems } = useList();
-  const {
-    urlState: { currentPage, fields, pageSize, search },
-  } = useListUrlState(list);
+  const { adminPath } = useAdminMeta();
+  const { history, location } = routeProps;
+  const { currentPage, fields, pageSize, search } = urlState;
 
-  const { filters } = useListFilter();
-  const [sortBy, handleSortChange] = useListSort();
+  const [selectedItems, onSelectChange] = useListSelect(items);
 
-  const { listHeaderActions } = useUIHooks();
+  // Mount with Persisted Search
+  // ------------------------------
+  useEffect(() => {
+    const maybePersistedSearch = list.getPersistedSearch();
+
+    if (location.search) {
+      if (location.search !== maybePersistedSearch) {
+        list.setPersistedSearch(location.search);
+      }
+    } else if (maybePersistedSearch) {
+      history.replace({
+        ...location,
+        search: maybePersistedSearch,
+      });
+    }
+  }, []);
+
+  // Misc.
+  // ------------------------------
+
+  const onDeleteSelectedItems = () => {
+    query.refetch();
+    onSelectChange([]);
+  };
+  const onDeleteItem = () => {
+    query.refetch();
+  };
+  const onUpdateSelectedItems = () => {
+    query.refetch();
+  };
+  const onCreate = ({ data }) => {
+    const id = data[list.gqlNames.createMutationName].id;
+    query.refetch().then(() => {
+      history.push(`${adminPath}/${list.path}/${id}`);
+    });
+  };
 
   // Success
   // ------------------------------
 
+  const cypressCreateId = 'list-page-create-button';
   const cypressFiltersId = 'ks-list-active-filters';
 
   const Render = ({ children }) => children();
@@ -58,7 +98,16 @@ export function ListLayout(props) {
         <HeaderInset>
           <FlexGroup align="center" justify="space-between">
             <PageTitle>{list.plural}</PageTitle>
-            {listHeaderActions ? listHeaderActions() : <CreateItem />}
+            {list.access.create ? (
+              <IconButton
+                appearance="primary"
+                icon={PlusIcon}
+                onClick={openCreateItemModal}
+                id={cypressCreateId}
+              >
+                Create
+              </IconButton>
+            ) : null}
           </FlexGroup>
           <ListDescription text={list.adminDoc} />
           <div
@@ -77,14 +126,18 @@ export function ListLayout(props) {
                 }}
               </Render>
             </Suspense>
-            <ActiveFilters list={list} />
+
           </div>
 
           <ManageToolbar isVisible css={{ marginLeft: 2 }}>
             {selectedItems.length ? (
               <Management
+                list={list}
+                onDeleteMany={onDeleteSelectedItems}
+                onUpdateMany={onUpdateSelectedItems}
                 pageSize={pageSize}
                 selectedItems={selectedItems}
+                onSelectChange={onSelectChange}
                 totalItems={itemCount}
               />
             ) : items && items.length ? (
@@ -110,13 +163,14 @@ export function ListLayout(props) {
                   {sortBy ? (
                     <Fragment>
                       <span css={{ paddingLeft: '0.5ex' }}>sorted by</span>
-                      <SortPopout />
+                      <SortPopout listKey={list.key} />
                     </Fragment>
                   ) : (
                     ''
                   )}
                   <span css={{ paddingLeft: '0.5ex' }}>with</span>
                   <ColumnPopout
+                    listKey={list.key}
                     target={handlers => (
                       <Button
                         variant="subtle"
@@ -140,7 +194,7 @@ export function ListLayout(props) {
                             .filter(field => field.path !== '_label_')
                             .map(field => () => field.initCellView())
                         );
-                        return <Pagination isLoading={query.loading} />;
+                        return <Pagination listKey={list.key} isLoading={query.loading} />;
                       }}
                     </Render>
                   </Suspense>
@@ -151,11 +205,12 @@ export function ListLayout(props) {
         </HeaderInset>
       </Container>
 
-      <CreateItemModal viewOnSave />
+      <CreateItemModal onCreate={onCreate} />
 
       <Container isFullWidth>
         <ListTable
           {...props}
+          adminPath={adminPath}
           columnControl={
             <ColumnPopout
               listKey={list.key}
@@ -181,10 +236,12 @@ export function ListLayout(props) {
           }
           fields={fields}
           handleSortChange={handleSortChange}
+          isFullWidth
           items={items}
           queryErrors={queryErrors}
           list={list}
-          onSelectChange={setSelectedItems}
+          onChange={onDeleteItem}
+          onSelectChange={onSelectChange}
           selectedItems={selectedItems}
           sortBy={sortBy}
           currentPage={currentPage}
@@ -196,56 +253,50 @@ export function ListLayout(props) {
   );
 }
 
-const ListPage = props => {
-  const {
-    list,
-    listData: { items, itemCount },
-    queryErrorsParsed,
-    query,
-  } = useList();
+export function List(props) {
+  const { list, query, routeProps } = props;
 
-  const history = useHistory();
-  const location = useLocation();
+  // get item data
+  const items = query.data && query.data[list.gqlNames.listQueryName];
+  const queryErrors = query.data && query.data.error;
+  let itemCount;
+  if (query.data && query.data[list.gqlNames.listQueryMetaName]) {
+    itemCount = query.data[list.gqlNames.listQueryMetaName].count;
+  }
 
-  const hasErrorWithNoData = query.error && (!query.data || !items || !Object.keys(items).length);
+  const { history, location } = routeProps;
 
   // Mount with Persisted Search
   // ------------------------------
   useEffect(() => {
-    // Remove the persisted search from localStorage if error occurs.
-    // This is to avoid appending the error-prone search query, which only renders the Error page.
-    if (hasErrorWithNoData) {
-      list.removePersistedSearch();
-      return;
-    }
-
     const maybePersistedSearch = list.getPersistedSearch();
-    if (location.search === maybePersistedSearch) {
-      return;
-    }
 
     if (location.search) {
-      list.setPersistedSearch(location.search);
+      if (location.search !== maybePersistedSearch) {
+        list.setPersistedSearch(location.search);
+      }
     } else if (maybePersistedSearch) {
       history.replace({
         ...location,
         search: maybePersistedSearch,
       });
     }
-  }, [hasErrorWithNoData]);
+  }, []);
 
   // Error
   // ------------------------------
   // Only show error page if there is no data
   // (ie; there could be partial data + partial errors)
-  if (hasErrorWithNoData) {
-    let message = '';
-    if (queryErrorsParsed) {
-      message = queryErrorsParsed.message;
-    }
+  if (
+    query.error &&
+    (!query.data ||
+      !query.data[list.gqlNames.listQueryName] ||
+      !Object.keys(query.data[list.gqlNames.listQueryName]).length)
+  ) {
+    let message = query.error.message;
 
-    // If there was an error returned by GraphQL, use that message instead
-    // FIXME: convert this to an optional chaining operator at some point
+    // If there was an error returned by GraphQL, use that message
+    // instead
     if (
       query.error.networkError &&
       query.error.networkError.result &&
@@ -278,10 +329,23 @@ const ListPage = props => {
         items={items}
         itemCount={itemCount}
         query={query}
-        queryErrors={queryErrorsParsed}
+        queryErrors={queryErrors}
       />
     </Fragment>
   );
-};
+}
 
-export default ListPage;
+export default function ListData(props) {
+  const { list } = props;
+  const { urlState } = useListUrlState(list.key);
+
+  const { currentPage, fields, filters, pageSize, search, sortBy } = urlState;
+  const orderBy = sortBy ? `${sortBy.field.path}_${sortBy.direction}` : null;
+  const first = pageSize;
+  const skip = (currentPage - 1) * pageSize;
+
+  const query = list.getQuery({ fields, filters, search, orderBy, skip, first });
+  const res = useQuery(query, { fetchPolicy: 'cache-and-network', errorPolicy: 'all' });
+
+  return <List query={res} {...props} />;
+}

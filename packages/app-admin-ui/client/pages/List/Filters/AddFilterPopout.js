@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import { Component, createRef, Suspense } from 'react';
 import { Transition, TransitionGroup } from 'react-transition-group';
 
-import { ChevronLeftIcon, ChevronRightIcon, AlertIcon } from '@primer/octicons-react';
+import { ChevronLeftIcon, ChevronRightIcon, AlertIcon } from '@arch-ui/icons';
 import { colors, gridSize } from '@arch-ui/theme';
 import { A11yText } from '@arch-ui/typography';
 import { Alert } from '@arch-ui/alert';
@@ -15,7 +15,6 @@ import { LoadingSpinner } from '@arch-ui/loading';
 import FieldSelect from '../FieldSelect';
 import PopoutForm from './PopoutForm';
 import { DisclosureArrow, POPOUT_GUTTER } from '../../../components/Popout';
-import { ErrorBoundary } from '../../../components/ErrorBoundary';
 
 const EventCatcher = props => (
   <div
@@ -182,7 +181,7 @@ export default class AddFilterPopout extends Component<Props, State> {
     const { field, filter, value } = this.state;
 
     event.preventDefault();
-    if (!filter || field.getFilterValue(value) === undefined) return;
+    if (!filter || value === null || field.getFilterValue(value) === null) return;
 
     onChange({ field, label: filter.label, type: filter.type, value });
   };
@@ -233,7 +232,7 @@ export default class AddFilterPopout extends Component<Props, State> {
             exiting: { transform: 'translateX(-100%)' },
             exited: { transform: 'translateX(-100%)' },
           };
-          this.props.fields[0].preloadViews(
+          this.props.fields[0].adminMeta.preloadViews(
             this.props.fields.map(({ views }) => views.Filter).filter(x => x)
           );
 
@@ -338,18 +337,16 @@ export default class AddFilterPopout extends Component<Props, State> {
               >
                 <Render>
                   {() => {
-                    const [Filter] = field.readViews([field.views.Filter]);
+                    let [Filter] = field.adminMeta.readViews([field.views.Filter]);
 
                     return (
-                      <ErrorBoundary>
-                        <Filter
-                          innerRef={this.filterRef}
-                          field={field}
-                          filter={filter}
-                          value={this.state.value}
-                          onChange={this.onChangeFilter}
-                        />
-                      </ErrorBoundary>
+                      <Filter
+                        innerRef={this.filterRef}
+                        field={field}
+                        filter={filter}
+                        value={this.state.value}
+                        onChange={this.onChangeFilter}
+                      />
                     );
                   }}
                 </Render>

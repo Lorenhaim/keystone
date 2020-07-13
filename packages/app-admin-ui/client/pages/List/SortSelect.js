@@ -2,19 +2,22 @@
 
 import { jsx } from '@emotion/core';
 import { useMemo, useRef } from 'react';
+import styled from '@emotion/styled';
 import { CheckMark, OptionPrimitive, Options } from '@arch-ui/options';
 import { colors } from '@arch-ui/theme';
 import { Kbd } from '@arch-ui/typography';
 import { Button } from '@arch-ui/button';
 
 import { DisclosureArrow, Popout, POPOUT_GUTTER } from '../../components/Popout';
-import { useListSort } from './dataHooks';
-import { useList } from '../../providers/List';
-import { useKeyDown } from '../../util';
+import { useList, useListSort, useKeyDown } from './dataHooks';
 
-export default function SortPopout() {
-  const { list } = useList();
-  const [sortValue, handleSortChange] = useListSort();
+type Props = {
+  listKey: string,
+};
+
+export default function SortPopout({ listKey }: Props) {
+  const list = useList(listKey);
+  const [sortValue, handleSortChange] = useListSort(listKey);
   const altIsDown = useKeyDown('Alt');
   const popoutRef = useRef();
 
@@ -32,13 +35,7 @@ export default function SortPopout() {
     popoutRef.current.close();
   };
 
-  const cachedOptions = useMemo(
-    () =>
-      list.fields
-        .filter(({ isOrderable }) => isOrderable) // TODO: should we include ID fields here?
-        .map(({ options, ...field }) => field),
-    [list]
-  );
+  const cachedOptions = useMemo(() => list.fields.map(({ options, ...field }) => field), [list]);
 
   const cypressId = 'list-page-sort-button';
 
@@ -92,15 +89,10 @@ export const SortOption = ({ children, isFocused, isSelected, ...props }) => {
   );
 };
 
-const Note = props => (
-  <div
-    css={{
-      color: colors.N60,
-      fontSize: '0.85em',
-    }}
-    {...props}
-  />
-);
+const Note = styled.div({
+  color: colors.N60,
+  fontSize: '0.85em',
+});
 
 // ==============================
 // Utilities

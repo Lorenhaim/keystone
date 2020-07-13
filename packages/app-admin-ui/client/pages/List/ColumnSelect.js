@@ -4,13 +4,16 @@ import { jsx } from '@emotion/core';
 import { OptionPrimitive, CheckMark } from '@arch-ui/options';
 
 import { Popout, POPOUT_GUTTER } from '../../components/Popout';
-import { useListColumns } from './dataHooks';
-import { useList } from '../../providers/List';
+import { useList, useListColumns } from './dataHooks';
 import FieldSelect from './FieldSelect';
 
-export default function ColumnPopout({ target }) {
-  const { list } = useList();
-  const [columns, handleColumnChange] = useListColumns();
+type Props = {
+  listKey: string,
+};
+
+export default function ColumnPopout({ listKey, target }: Props) {
+  const list = useList(listKey);
+  const [columns, handleColumnChange] = useListColumns(listKey);
   const cypresSelectId = 'ks-column-select';
 
   return (

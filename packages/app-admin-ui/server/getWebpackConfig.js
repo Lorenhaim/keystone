@@ -4,11 +4,9 @@ const path = require('path');
 
 const { enableDevFeatures, mode } = require('./env');
 
-const clientDirectory = path.resolve(__dirname, '..', 'client');
-
-module.exports = function({ adminMeta, adminViews, entry, outputPath }) {
+module.exports = function({ adminMeta, entry, outputPath }) {
   const templatePlugin = new HtmlWebpackPlugin({
-    title: 'KeystoneJS',
+    title: 'Admin - Projeto Social Brasil',
     template: 'index.html',
     chunksSortMode: 'none',
     scriptLoading: 'defer',
@@ -22,9 +20,7 @@ module.exports = function({ adminMeta, adminViews, entry, outputPath }) {
   const rules = [
     {
       test: /\.js$/,
-      exclude: pathname => {
-        return pathname.includes('node_modules') && !pathname.startsWith(clientDirectory);
-      },
+      exclude: [/node_modules(?!(?:\/|\\)@keystonejs(?:\/|\\)app-admin-ui)/],
       use: [
         {
           loader: 'babel-loader',
@@ -48,14 +44,30 @@ module.exports = function({ adminMeta, adminViews, entry, outputPath }) {
     {
       test: /\.css$/,
       use: ['style-loader', 'css-loader'],
+      include: /node_modules/,
+    },
+    // This is a workaround for a problem with graphql@0.13.x. It can be removed
+    // once we upgrade to graphql@14.0.2.
+    // https://github.com/zeit/next.js/issues/5233#issuecomment-424738510
+    {
+      test: /\.mjs$/,
+      include: /node_modules/,
+      type: 'javascript/auto',
     },
   ];
-  const { pages, hooks, listViews } = adminViews;
-  rules.push({
-    test: /FIELD_TYPES/,
-    use: [{ loader: '@keystonejs/field-views-loader', options: { pages, hooks, listViews } }],
-  });
-
+  if (adminMeta.lists) {
+    rules.push({
+      test: /FIELD_TYPES/,
+      use: [
+        {
+          loader: '@keystonejs/field-views-loader',
+          options: {
+            adminMeta,
+          },
+        },
+      ],
+    });
+  }
   const entryPath = `./${entry}.js`;
   return {
     mode,

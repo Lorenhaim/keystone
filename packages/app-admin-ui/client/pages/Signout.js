@@ -1,13 +1,14 @@
 /** @jsx jsx */
 
 import { jsx } from '@emotion/core';
+import styled from '@emotion/styled';
 
 import { Fragment } from 'react';
 
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
-import { CheckIcon } from '@primer/octicons-react';
+import { CheckIcon } from '@arch-ui/icons';
 import { Button } from '@arch-ui/button';
 import { LoadingIndicator } from '@arch-ui/loading';
 import { colors } from '@arch-ui/theme';
@@ -15,50 +16,52 @@ import { colors } from '@arch-ui/theme';
 import Animation from '../components/Animation';
 import { useAdminMeta } from '../providers/AdminMeta';
 
-const FlexBox = props => (
-  <div
-    css={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}
-    {...props}
-  />
-);
+const FlexBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
-const Container = props => <FlexBox css={{ minHeight: '100vh' }} {...props} />;
+const Container = styled(FlexBox)`
+  min-height: 100vh;
+`;
 
-const Caption = props => <p css={{ fontSize: '1.5em' }} {...props} />;
+const Caption = styled.p`
+  font-size: 1.5em;
+`;
 
-const SignOutPageButton = props => (
-  <Button
-    css={{ width: '200px', height: '2.6em', marginBottom: '0.8em', lineHeight: 'unset' }}
-    {...props}
-  />
-);
+const SignOutPageButton = styled(Button)`
+  width: 200px;
+  height: 2.6em;
+  margin-bottom: 0.8em;
+  line-height: unset;
+`;
 
 const SignedOutPage = () => {
   const {
-    authStrategy: {
-      gqlNames: { unauthenticateMutationName },
-    },
+    authStrategy: { listKey },
     signinPath,
   } = useAdminMeta();
 
   const UNAUTH_MUTATION = gql`
     mutation {
-      unauthenticate: ${unauthenticateMutationName} {
+      unauthenticate: unauthenticate${listKey} {
         success
       }
     }
   `;
 
   const [signOut, { loading, client, called }] = useMutation(UNAUTH_MUTATION, {
-    onCompleted: async () => {
+    onCompleted: ({ error }) => {
+      if (error) {
+        throw error;
+      }
+
       // Ensure there's no old authenticated data hanging around
-      await client.clearStore();
+      client.resetStore();
     },
+    onError: console.error,
   });
 
   if (!called) {
@@ -70,17 +73,17 @@ const SignedOutPage = () => {
       {loading ? (
         <Fragment>
           <LoadingIndicator css={{ height: '3em' }} size={12} />
-          <Caption>Signing out.</Caption>
+          <Caption>Deslogado.</Caption>
         </Fragment>
       ) : (
         <Fragment>
           <Animation name="pulse" duration="500ms">
             <CheckIcon css={{ color: colors.primary, height: '3em', width: '3em' }} />
           </Animation>
-          <Caption>You have been signed out.</Caption>
+          <Caption>Você foi deslogado com Sucesso.</Caption>
           <FlexBox>
             <SignOutPageButton variant="ghost" href={signinPath}>
-              Sign In
+              Logar
             </SignOutPageButton>
           </FlexBox>
         </Fragment>

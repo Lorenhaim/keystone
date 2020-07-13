@@ -3,7 +3,7 @@
 import { jsx } from '@emotion/core';
 
 import { Button } from '@arch-ui/button';
-import { InfoIcon } from '@primer/octicons-react';
+import { InfoIcon } from '@arch-ui/icons';
 import { colors } from '@arch-ui/theme';
 
 import { useListPagination } from '../pages/List/dataHooks';
@@ -28,7 +28,7 @@ const NoResultsWrapper = ({ children, ...props }) => (
 );
 
 export const NoResults = ({ currentPage, filters, list, search }) => {
-  const { onChange } = useListPagination();
+  const { onChange } = useListPagination(list.key);
   const onResetPage = () => onChange(1);
 
   const pageDepthMessage = (
