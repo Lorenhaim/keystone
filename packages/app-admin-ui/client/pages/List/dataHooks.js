@@ -19,7 +19,7 @@ export const useList = listKey => {
   const list = getListByKey(listKey);
 
   if (!list) {
-    throw new Error(`No list matching key "${listKey}"`);
+    throw new Error(``);
   }
 
   return list;

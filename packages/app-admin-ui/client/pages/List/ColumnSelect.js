@@ -17,7 +17,7 @@ export default function ColumnPopout({ listKey, target }: Props) {
   const cypresSelectId = 'ks-column-select';
 
   return (
-    <Popout target={target} headerTitle="Columns">
+    <Popout target={target} headerTitle="Colunas">
       <div id={cypresSelectId} css={{ padding: POPOUT_GUTTER }}>
         <FieldSelect
           fields={list.fields}
@@ -26,7 +26,7 @@ export default function ColumnPopout({ listKey, target }: Props) {
           value={columns}
           components={{ Option: ColumnOption }}
           isMulti
-          placeholder="Select columns to display"
+          placeholder="Selecione as colunas"
           includeLabelField
         />
       </div>

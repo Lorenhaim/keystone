@@ -11,7 +11,7 @@ import { useReset } from './dataHooks';
 
 let dropdownTarget = props => (
   <IconButton {...props} variant="nuance" icon={KebabVerticalIcon} id="ks-list-dropdown">
-    <A11yText>Show more...</A11yText>
+    <A11yText>Mostrar mais</A11yText>
   </IconButton>
 );
 
@@ -23,13 +23,13 @@ export function MoreDropdown({ listKey, measureRef, isFullWidth, onFullWidthTogg
 
   const items = [
     {
-      content: 'Reset filters, cols, etc.',
+      content: 'Resetar filtros, colunas, etc.',
       icon: <ZapIcon />,
       id: 'ks-list-dropdown-reset', // for cypress tests
       onClick: onReset,
     },
     {
-      content: isFullWidth ? 'Collapse table' : 'Expand table',
+      content: isFullWidth ? 'Recolher Tabela' : 'Expandir Tabela',
       icon: <TableIcon css={{ transform: 'rotate(90deg)' }} />,
       isDisabled: !tableToggleIsAvailable,
       onClick: onFullWidthToggle,

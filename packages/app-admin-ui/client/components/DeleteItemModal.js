@@ -15,7 +15,7 @@ export default function DeleteItemModal({ isOpen, item, list, onClose, onDelete 
       }}
     >
       <p style={{ marginTop: 0 }}>
-        Are you sure you want to delete <strong>{item._label_}</strong>?
+        Tem certeza que deseja Deletar? <strong>{item._label_}</strong>?
       </p>
       <footer>
         <Button
@@ -26,7 +26,7 @@ export default function DeleteItemModal({ isOpen, item, list, onClose, onDelete 
             onDelete(deleteItem({ variables: { id: item.id } }));
           }}
         >
-          Delete
+          Deletar
         </Button>
         <Button
           variant="subtle"
@@ -35,7 +35,7 @@ export default function DeleteItemModal({ isOpen, item, list, onClose, onDelete 
             onClose();
           }}
         >
-          Cancel
+          Cancelar
         </Button>
       </footer>
     </Confirm>

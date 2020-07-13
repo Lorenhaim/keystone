@@ -61,7 +61,7 @@ export let IdCopy = memo(function IdCopy({ id }) {
             <div css={{ width: 16 }}>
               <CopyIcon isCopied={isCopied} />
             </div>
-            <A11yText>Copy ID</A11yText>
+            <A11yText>Copiar ID</A11yText>
           </Button>
         )}
       </Tooltip>

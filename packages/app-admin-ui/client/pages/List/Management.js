@@ -43,7 +43,7 @@ export default function ListManage(props) {
     <Fragment>
       <FlexGroup align="center">
         <SelectedCount>
-          {selectedCount} of {Math.min(pageSize, totalItems)} Selected
+          {selectedCount} de {Math.min(pageSize, totalItems)} Selecionado(s)
         </SelectedCount>
         {ENABLE_DEV_FEATURES ? (
           list.access.update ? (
@@ -54,7 +54,7 @@ export default function ListManage(props) {
               variant="nuance"
               data-test-name="update"
             >
-              Update
+              Atualizar
             </IconButton>
           ) : null
         ) : null}
@@ -66,7 +66,7 @@ export default function ListManage(props) {
             variant="nuance"
             data-test-name="delete"
           >
-            Delete
+            Deletar
           </IconButton>
         ) : null}
       </FlexGroup>

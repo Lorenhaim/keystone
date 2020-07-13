@@ -145,7 +145,7 @@ function CreateItemModal({ prefillData = {}, isLoading, createItem, onClose, onC
       component={formComponent}
       isOpen={isCreateItemModalOpen}
       onClose={_onClose}
-      heading={`Create ${list.singular}`}
+      heading={`Criar ${list.singular}`}
       onKeyDown={_onKeyDown}
       slideInFrom="right"
       footer={
@@ -157,10 +157,10 @@ function CreateItemModal({ prefillData = {}, isLoading, createItem, onClose, onC
             isLoading={isLoading}
             type="submit"
           >
-            {hasWarnings && !hasErrors ? 'Ignore Warnings and Create' : 'Create'}
+            {hasWarnings && !hasErrors ? 'Ignorar Avisos e Criar' : 'Criar'}
           </LoadingButton>
           <Button appearance="warning" variant="subtle" onClick={_onClose}>
-            Cancel
+            Cancelar
           </Button>
         </Fragment>
       }

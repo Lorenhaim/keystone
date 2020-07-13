@@ -47,7 +47,7 @@ export default function Search({ isLoading, list }) {
       onSubmit={onSubmit}
     >
       <A11yText tag="label" htmlFor={id}>
-        Search {list.plural}
+        Procurando {list.singular}
       </A11yText>
       <Input
         autoCapitalize="off"
@@ -55,7 +55,7 @@ export default function Search({ isLoading, list }) {
         autoCorrect="off"
         id={id}
         onChange={handleChange}
-        placeholder="Search"
+        placeholder="Procura"
         name="item-search"
         value={value}
         type="text"

@@ -33,9 +33,9 @@ export const NoResults = ({ currentPage, filters, list, search }) => {
 
   const pageDepthMessage = (
     <NoResultsWrapper>
-      <p>{`Not enough ${list.plural.toLowerCase()} found to show page ${currentPage}.`}</p>
+      <p>{`Nenhum(a) ${list.singular.toLowerCase()} Encontrado em ${currentPage}.`}</p>
       <Button variant="ghost" onClick={onResetPage}>
-        Show first page
+        Pagina Inicial
       </Button>
     </NoResultsWrapper>
   );
@@ -47,8 +47,8 @@ export const NoResults = ({ currentPage, filters, list, search }) => {
   if (filters && filters.length) {
     return (
       <NoResultsWrapper>
-        {`No ${list.plural.toLowerCase()} found matching the ${
-          filters.length > 1 ? 'filters' : 'filter'
+        {`Nenhum(a) ${list.singular.toLowerCase()} foi encontrado com o ${
+          filters.length > 1 ? 'filtros' : 'filtro'
         }`}
       </NoResultsWrapper>
     );
@@ -57,10 +57,10 @@ export const NoResults = ({ currentPage, filters, list, search }) => {
   if (search && search.length) {
     return (
       <NoResultsWrapper>
-        {`No ${list.plural.toLowerCase()} found matching “${search}”`}
+        {`Nenhum(a) ${list.singular.toLowerCase()} foi encontrado com “${search}”`}
       </NoResultsWrapper>
     );
   }
 
-  return <NoResultsWrapper>{`No ${list.plural.toLowerCase()} to display yet...`}</NoResultsWrapper>;
+  return <NoResultsWrapper>{`Nenhum(a) ${list.singular.toLowerCase()} existe ainda.`}</NoResultsWrapper>;
 };

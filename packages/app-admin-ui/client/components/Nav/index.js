@@ -211,7 +211,7 @@ function renderChildren(
     throw new Error(`Unable to resolve list for key ${key}`);
   }
 
-  const label = node.label || list.plural;
+  const label = node.label || list.singular;
   const maybeSearchParam = list.getPersistedSearch() || '';
   const path = getPath(location.pathname);
   const href = `${adminPath}/${list.path}`;
@@ -250,15 +250,10 @@ function PrimaryNavItems({
     hasRenderedIndexPage = true;
   };
 
-  listKeys = [
-    "Emenda",
-    "Instituicoe",
-    "Projeto",
-    "Representante",
-    "BaseImplementacoe",
-    //"Tipo",
-    //"User",
-  ];
+  listKeys = listKeys.sort(function(a,b){ return a.length - b.length; });
+  console.log(listKeys);
+  listKeys = ["Emenda", "Instituicao", "Projeto", "Base",  "Representante", "PoloImplantacao"];
+
   const pageNavItems =
     pages && pages.length
       ? pages
@@ -296,7 +291,7 @@ function PrimaryNavItems({
                 isSelected={isAtDashboard}
                 mouseIsOverNav={mouseIsOverNav}
               >
-                Dashboard
+                Inicio
               </PrimaryNavItem>
             )}
 
@@ -356,9 +351,9 @@ const UserInfo = ({ authListKey, authListPath }) => {
         <PersonIcon width={20} height={20} />
       </UserIcon>
       <div css={{ overflow: 'hidden' }}>
-        <Truncate css={{ fontSize: '0.7em' }}>Logged in as</Truncate>
+        <Truncate css={{ fontSize: '0.7em' }}>Logado Como</Truncate>
         {loading ? (
-          'Loading...'
+          'Carregando...'
         ) : (
           <Truncate
             as={Link}
@@ -382,8 +377,13 @@ const ActionItems = ({ mouseIsOverNav }) => {
     () => [
       ...(authStrategy
         ? [
+          {
+            label: 'Usuários',
+            to: 'https://projetosocialbrasil.com.br/admin/users',
+            icon: PersonIcon,
+          },
             {
-              label: 'Sign out',
+              label: 'Sair',
               to: signoutPath,
               icon: SignOutIcon,
             },
@@ -514,7 +514,7 @@ const Nav = ({ children }) => {
               <Tooltip
                 content={
                   <TooltipContent kbd={KEYBOARD_SHORTCUT}>
-                    {isCollapsed ? 'Click to Expand' : 'Click to Collapse'}
+                    {isCollapsed ? 'Expandir' : 'Recolher'}
                   </TooltipContent>
                 }
                 placement="right"

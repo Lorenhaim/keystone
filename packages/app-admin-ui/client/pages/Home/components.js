@@ -60,7 +60,7 @@ const BoxComponent = ({ focusOrigin, isActive, isHover, isFocus, meta, ...props 
         </Name>
         <Count meta={meta} />
         <CreateButton
-          title={`Create ${singular}`}
+          title={`Criar ${singular}`}
           isHover={isHover || isFocus}
           onClick={e => {
             e.preventDefault();
@@ -68,7 +68,7 @@ const BoxComponent = ({ focusOrigin, isActive, isHover, isFocus, meta, ...props 
           }}
         >
           <PlusIcon />
-          <A11yText>Create {singular}</A11yText>
+          <A11yText>Criar {singular}</A11yText>
         </CreateButton>
       </BoxElement>
       <CreateItemModal onCreate={onCreate} />

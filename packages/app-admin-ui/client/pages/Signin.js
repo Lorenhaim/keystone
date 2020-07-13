@@ -122,7 +122,7 @@ const SignInPage = () => {
     <Container>
       <Alerts>
         {error ? (
-          <Alert appearance="danger">Usuario ou senha incorretos</Alert>
+          <Alert appearance="danger">Nome ou Senha Incorretos</Alert>
         ) : null}
       </Alerts>
       <PageTitle>{siteName}</PageTitle>

@@ -187,12 +187,12 @@ class ListRow extends Component {
     const copyText = window.location.origin + link({ path: list.path, item });
     const items = [
       {
-        content: 'Copy Link',
+        content: 'Copiar Link',
         icon: <LinkIcon />,
         onClick: () => copyToClipboard(copyText),
       },
       {
-        content: 'Delete',
+        content: 'Deletar',
         icon: <TrashcanIcon />,
         onClick: this.showDeleteModal,
       },
@@ -229,6 +229,13 @@ class ListRow extends Component {
               </BodyCellTruncated>
             );
           }
+          /*else if (path && item[path]) {
+            return (
+              <BodyCellTruncated isSelected={isSelected} key={path}>
+                <ItemLink to={link({ path: list.path, item })}>{item[path]}</ItemLink>
+              </BodyCellTruncated>
+            );
+          }*/
 
           let content;
 
@@ -257,7 +264,7 @@ class ListRow extends Component {
 
           return (
             <BodyCellTruncated isSelected={isSelected} key={path}>
-              {content}
+              <ItemLink to={link({ path: list.path, item })}>{content}</ItemLink>
             </BodyCellTruncated>
           );
         })}

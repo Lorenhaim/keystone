@@ -49,9 +49,9 @@ const Homepage = () => {
         <DocTitle title="Home" />
         <PageError>
           <p>
-            No lists defined.{' '}
+            Nenhuma lista Declarada.{' '}
             <Link href="https://keystonejs.com/tutorials/add-lists">
-              Get started by creating your first list.
+              Crie sua Primeira lista.
             </Link>
           </p>
         </PageError>
@@ -105,12 +105,15 @@ const Homepage = () => {
       <main>
         <Container>
           <HeaderInset>
-            <PageTitle>Dashboard</PageTitle>
+            <PageTitle>Inicio</PageTitle>
           </HeaderInset>
           <Grid ref={measureElement} gap={16}>
             {allowedLists.map(list => {
               const { key, path } = list;
               const meta = data && data[list.gqlNames.listQueryMetaName];
+              list.label = list.key;
+              list.plural = list.key;
+              console.log(list);
               return (
                 <ListProvider list={list} key={key}>
                   <Cell width={cellWidth}>

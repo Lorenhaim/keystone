@@ -11,5 +11,5 @@ export default memo(function PreventNavigation() {
     return () => window.removeEventListener('beforeunload', handler);
   }, []);
   // to handle the user clicking a react-router Link
-  return <Prompt when message="This page has unsaved data. Are you sure you want to leave?" />;
+  return <Prompt when message="Existem alterações não salvas. Tem certeza que deseja sair?" />;
 });

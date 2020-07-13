@@ -125,7 +125,7 @@ const ItemDetails = ({
         }
 
         history.replace(`${adminPath}/${list.path}`);
-        toastItemSuccess({ addToast }, initialData, 'Deleted successfully');
+        toastItemSuccess({ addToast }, initialData, 'Deletado com sucesso.');
       })
       .catch(error => {
         toastError({ addToast }, error);
@@ -185,16 +185,16 @@ const ItemDetails = ({
       if (totalErrors + totalWarnings > 0) {
         const messages = [];
         if (totalErrors > 0) {
-          messages.push(`${totalErrors} error${totalErrors > 1 ? 's' : ''}`);
+          messages.push(`${totalErrors} erro${totalErrors > 1 ? 's' : ''}`);
         }
 
         if (totalWarnings > 0) {
-          messages.push(`${totalWarnings} warning${totalWarnings > 1 ? 's' : ''}`);
+          messages.push(`${totalWarnings} aviso${totalWarnings > 1 ? 's' : ''}`);
         }
 
-        addToast(`Validation failed: ${messages.join(' and ')}.`, {
+        addToast(`VFalha na Validação: ${messages.join(' e ')}.`, {
           autoDismiss: true,
-          appearance: errors.length ? 'error' : 'warning',
+          appearance: errors.length ? 'erro' : 'aviso',
         });
 
         setValidationErrors(errors);
@@ -223,7 +223,7 @@ const ItemDetails = ({
     const savedItem = await onUpdate();
 
     // Defer the toast to this point since it ensures up-to-date data, such as for _label_.
-    toastItemSuccess({ addToast }, savedItem, 'Saved successfully');
+    toastItemSuccess({ addToast }, savedItem, 'Salvo com sucesso');
 
     // No changes since we kicked off the item saving
     if (!itemHasChanged.current) {
@@ -337,9 +337,9 @@ const ItemDetails = ({
 
 const ItemNotFound = ({ adminPath, errorMessage, list }) => (
   <PageError>
-    <p>Couldn't find a {list.singular} matching that ID</p>
+    <p>Não foi possivel encontrar um {list.singular} com esse ID</p>
     <Button to={`${adminPath}/${list.path}`} variant="ghost">
-      Back to List
+      Voltar
     </Button>
     {errorMessage ? (
       <p style={{ fontSize: '0.75rem', marginTop: gridSize * 4 }}>
@@ -413,7 +413,7 @@ const ItemPage = ({ list, itemId }) => {
   ) {
     return (
       <Fragment>
-        <DocTitle title={`${list.singular} not found`} />
+        <DocTitle title={`${list.singular} não encontrado`} />
         <ItemNotFound adminPath={adminPath} errorMessage={error.message} list={list} />
       </Fragment>
     );

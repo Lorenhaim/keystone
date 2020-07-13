@@ -10,16 +10,9 @@ const ListNotFoundPage = ({ listKey }) => {
   const { adminPath } = useAdminMeta();
 
   return (
-    <PageError Icon={IssueOpenedIcon}>
-      <p>
-        The list &ldquo;
-        {listKey}
-        &rdquo; doesn&apos;t exist
-      </p>
-      <Button to={adminPath} variant="ghost">
-        Go Home
+    <Button to={adminPath} variant="ghost">
+        Página Inicial
       </Button>
-    </PageError>
   );
 };
 

@@ -33,21 +33,21 @@ function getRange({ currentPage, pageSize, total }) {
 export function getPaginationLabel({
   currentPage,
   pageSize,
-  plural = 'Items',
+  plural = 'Itens',
   singular = 'Item',
   total,
 }) {
   if (!total) {
-    return `No ${plural}`;
+    return `Sem ${plural}`;
   }
 
   let count = '';
   let { end, start } = getRange({ currentPage, pageSize, total });
 
   if (total > pageSize) {
-    count = `Showing ${start} to ${end} of ${total}`;
+    count = `Mostrando de ${start} a ${end}. Total: ${total}`;
   } else {
-    count = `Showing ${total} `;
+    count = `Mostrando ${total}`;
     if (total > 1 && plural) {
       count += plural;
     } else if (total === 1 && singular) {

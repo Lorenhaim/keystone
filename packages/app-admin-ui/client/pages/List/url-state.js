@@ -171,7 +171,7 @@ export const encodeSearch = (data, props) => {
     if (data[key] === searchDefaults[key]) return acc;
 
     if (!allowedSearchParams.includes(key)) {
-      throw new Error(`Key "${key}" is not allowed as a query param.`);
+      throw new Error(`Valor "${key}" não é permitido.`);
     }
 
     switch (key) {

@@ -80,7 +80,7 @@ const SignedOutPage = () => {
           <Animation name="pulse" duration="500ms">
             <CheckIcon css={{ color: colors.primary, height: '3em', width: '3em' }} />
           </Animation>
-          <Caption>Você foi deslogado com Sucesso.</Caption>
+          <Caption>Você foi Deslogado.</Caption>
           <FlexBox>
             <SignOutPageButton variant="ghost" href={signinPath}>
               Logar

@@ -100,7 +100,7 @@ class ResizeHandler extends Component {
 
   render() {
     const resizeProps = {
-      title: 'Drag to Resize',
+      title: 'Arraster para Redimensionar',
       onMouseDown: this.handleResizeStart,
     };
     const clickProps = {

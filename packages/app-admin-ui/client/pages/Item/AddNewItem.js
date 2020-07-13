@@ -13,7 +13,7 @@ const AddNewItem = () => {
   if (!access.create) return null;
   const cypressId = 'item-page-create-button';
   return (
-    <Tooltip content="Create" hideOnMouseDown hideOnKeyDown>
+    <Tooltip content="Criar" hideOnMouseDown hideOnKeyDown>
       {ref => (
         <IconButton
           ref={ref}

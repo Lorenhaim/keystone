@@ -15,7 +15,7 @@ export default function DeleteManyModal({ isOpen, itemIds, list, onClose, onDele
       }}
     >
       <p style={{ marginTop: 0 }}>
-        Are you sure you want to delete <strong>{list.formatCount(itemIds)}</strong>?
+        Tem certeza que deseja Deletar? <strong>{list.formatCount(itemIds)}</strong>?
       </p>
       <footer>
         <Button
@@ -28,7 +28,7 @@ export default function DeleteManyModal({ isOpen, itemIds, list, onClose, onDele
             }).then(onDelete);
           }}
         >
-          Delete
+          Deletar
         </Button>
         <Button
           variant="subtle"
@@ -37,7 +37,7 @@ export default function DeleteManyModal({ isOpen, itemIds, list, onClose, onDele
             onClose();
           }}
         >
-          Cancel
+          Cancelar
         </Button>
       </footer>
     </Confirm>

@@ -46,7 +46,7 @@ function Reset({ canReset, onReset }) {
     <div css={{ display: 'flex', alignItems: 'center', marginLeft: gridSize }}>
       <div css={{ fontSize: '0.9rem', marginRight: gridSize }}>Are you sure?</div>
       <Button appearance="danger" autoFocus onClick={onReset} variant="ghost">
-        Reset
+        Resetar
       </Button>
       <Button
         variant="subtle"
@@ -54,7 +54,7 @@ function Reset({ canReset, onReset }) {
           setResetRequested(false);
         }}
       >
-        Cancel
+        Cancelar
       </Button>
     </div>
   ) : (
@@ -66,7 +66,7 @@ function Reset({ canReset, onReset }) {
         setResetRequested(true);
       }}
     >
-      Reset Changes
+      Descartar Mudanças
     </Button>
   );
 }
@@ -88,7 +88,7 @@ export default memo(function Footer(props) {
             style={{ marginRight: 8 }}
             type="submit"
           >
-            {hasWarnings && !hasErrors ? 'Ignore Warnings and Save Changes' : 'Save Changes'}
+            {hasWarnings && !hasErrors ? 'Ignorar avisos e Salvar Mudanças' : 'Salvar Mudanças'}
           </LoadingButton>
           <Reset canReset={canReset} onReset={onReset} />
         </div>
@@ -99,7 +99,7 @@ export default memo(function Footer(props) {
             variant="nuance"
             onClick={onDelete}
           >
-            Delete
+            Deletar
           </Button>
         </div>
       </Toolbar>

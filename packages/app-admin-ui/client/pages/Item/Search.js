@@ -55,7 +55,7 @@ export function Search({ list }) {
       onSubmit={handleSubmit}
     >
       <A11yText tag="label" htmlFor={id}>
-        Busca {list.plural}
+        Buscar {list.singular}
       </A11yText>
       <Input
         autoCapitalize="off"
@@ -63,7 +63,7 @@ export function Search({ list }) {
         autoCorrect="off"
         id={id}
         onChange={handleChange}
-        placeholder="Search"
+        placeholder="Buscar"
         name="item-search"
         value={value}
         type="text"
@@ -92,7 +92,7 @@ export function Search({ list }) {
       </div>
     </form>
   ) : (
-    <Tooltip content="Search" hideOnMouseDown hideOnKeyDown>
+    <Tooltip content="Buscar" hideOnMouseDown hideOnKeyDown>
       {ref => (
         <IconButton ref={ref} iconSize={16} variant="subtle" icon={SearchIcon} onClick={showForm} />
       )}

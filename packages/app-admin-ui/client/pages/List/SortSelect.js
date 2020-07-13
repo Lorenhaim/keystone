@@ -45,7 +45,7 @@ export default function SortPopout({ listKey }: Props) {
       headerTitle="Sort"
       footerContent={
         <Note>
-          Hold <Kbd>alt</Kbd> to toggle ascending/descending
+          Pressione <Kbd>alt</Kbd> para mudar de ASC/DESC
         </Note>
       }
       target={handlers => (
@@ -61,7 +61,7 @@ export default function SortPopout({ listKey }: Props) {
           isOptionSelected={isOptionSelected}
           onChange={handleChange}
           options={cachedOptions}
-          placeholder="Search fields..."
+          placeholder="Procurar Campos..."
           value={sortValue}
           altIsDown={altIsDown}
         />

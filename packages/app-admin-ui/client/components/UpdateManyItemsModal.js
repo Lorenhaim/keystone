@@ -109,7 +109,7 @@ class UpdateManyModal extends Component {
         isOpen={isOpen}
         onClose={this.onClose}
         closeOnBlanketClick
-        heading={`Update ${list.formatCount(items)}`}
+        heading={`Atualizar ${list.formatCount(items)}`}
         onKeyDown={this.onKeyDown}
         slideInFrom="left"
         footer={
@@ -120,10 +120,10 @@ class UpdateManyModal extends Component {
               isLoading={isLoading}
               onClick={this.onUpdate}
             >
-              {hasWarnings && !hasErrors ? 'Ignore Warnings and Update' : 'Update'}
+              {hasWarnings && !hasErrors ? 'Ignorar avisos e Atualizar' : 'Atualizar'}
             </LoadingButton>
             <Button appearance="warning" variant="subtle" onClick={this.onClose}>
-              Cancel
+              Cancelar
             </Button>
           </Fragment>
         }

@@ -97,7 +97,7 @@ export function ListLayout(props) {
       <Container isFullWidth>
         <HeaderInset>
           <FlexGroup align="center" justify="space-between">
-            <PageTitle>{list.plural}</PageTitle>
+            <PageTitle>{list.singular}</PageTitle>
             {list.access.create ? (
               <IconButton
                 appearance="primary"
@@ -105,7 +105,7 @@ export function ListLayout(props) {
                 onClick={openCreateItemModal}
                 id={cypressCreateId}
               >
-                Create
+                Criar
               </IconButton>
             ) : null}
           </FlexGroup>
@@ -154,7 +154,7 @@ export function ListLayout(props) {
                     {getPaginationLabel({
                       currentPage: currentPage,
                       pageSize: pageSize,
-                      plural: list.plural,
+                      plural: list.singular + '(s)',
                       singular: list.singular,
                       total: itemCount,
                     })}
@@ -162,13 +162,13 @@ export function ListLayout(props) {
                   </span>
                   {sortBy ? (
                     <Fragment>
-                      <span css={{ paddingLeft: '0.5ex' }}>sorted by</span>
+                      <span css={{ paddingLeft: '0.5ex' }}>Ordenar por</span>
                       <SortPopout listKey={list.key} />
                     </Fragment>
                   ) : (
                     ''
                   )}
-                  <span css={{ paddingLeft: '0.5ex' }}>with</span>
+                  <span css={{ paddingLeft: '0.5ex' }}>com</span>
                   <ColumnPopout
                     listKey={list.key}
                     target={handlers => (
@@ -179,7 +179,7 @@ export function ListLayout(props) {
                         id="ks-column-button"
                         {...handlers}
                       >
-                        {fields.length} Columns
+                        {fields.length} Colunas
                         <DisclosureArrow />
                       </Button>
                     )}
@@ -215,7 +215,7 @@ export function ListLayout(props) {
             <ColumnPopout
               listKey={list.key}
               target={handlers => (
-                <Tooltip placement="top" content="Columns">
+                <Tooltip placement="top" content="Colunas">
                   {ref => (
                     <Button
                       variant="subtle"
@@ -309,7 +309,7 @@ export function List(props) {
     // Special case for when trying to access a non-existent list or a
     // list that is set to `read: false`.
     if (message.startsWith('Cannot query field')) {
-      message = `Unable to access list ${list.plural}`;
+      message = `Não foi possivel acessar a lista ${list.singular}`;
     }
 
     return (
@@ -323,7 +323,7 @@ export function List(props) {
   // ------------------------------
   return (
     <Fragment>
-      <DocTitle title={list.plural} />
+      <DocTitle title={list.singular} />
       <ListLayout
         {...props}
         items={items}
