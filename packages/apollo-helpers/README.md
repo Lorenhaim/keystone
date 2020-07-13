@@ -6,7 +6,7 @@ title: Apollo helpers
 
 # Apollo helpers
 
-[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@keystonejs/apollo-helpers)
+[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@koikorn/apollo-helpers)
 
 A set of functions and components to ease using
 [Apollo](https://www.apollographql.com/docs/react/) with Keystone.
@@ -14,7 +14,7 @@ A set of functions and components to ease using
 ## Installation
 
 ```shell
-yarn add @keystonejs/apollo-helpers
+yarn add @koikorn/apollo-helpers
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ import { HttpLink } from 'apollo-link-http';
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloProvider } from 'react-apollo';
-import { Query, KeystoneProvider } from '@keystonejs/apollo-helpers';
+import { Query, KeystoneProvider } from '@koikorn/apollo-helpers';
 
 const client = new ApolloClient({
   link: new HttpLink({ uri: '...' }),
@@ -73,7 +73,7 @@ import {
   KeystoneProvider,
   injectIsOptimisticFlag,
   flattenApollo,
-} from '@keystonejs/apollo-helpers';
+} from '@koikorn/apollo-helpers';
 
 const cache = new InMemoryCache();
 

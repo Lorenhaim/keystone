@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-import { MongooseFieldAdapter } from '@keystonejs/adapter-mongoose';
-import { KnexFieldAdapter } from '@keystonejs/adapter-knex';
+import { MongooseFieldAdapter } from '@koikorn/adapter-mongoose';
+import { KnexFieldAdapter } from '@koikorn/adapter-knex';
 
 const {
   Schema: {

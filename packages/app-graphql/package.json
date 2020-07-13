@@ -1,5 +1,5 @@
 {
-  "name": "@keystonejs/app-graphql",
+  "name": "@koikorn/app-graphql",
   "description": "KeystoneJS GraphQL App.",
   "version": "5.1.9",
   "author": "The KeystoneJS Development Team",
@@ -8,10 +8,10 @@
     "node": ">=10.0.0"
   },
   "dependencies": {
-    "@keystonejs/app-graphql-playground": "^5.1.4",
-    "@keystonejs/logger": "^5.1.2",
-    "@keystonejs/session": "^7.0.1",
-    "@keystonejs/utils": "^5.4.2",
+    "@koikorn/app-graphql-playground": "^5.1.4",
+    "@koikorn/logger": "^5.1.2",
+    "@koikorn/session": "^7.0.1",
+    "@koikorn/utils": "^5.4.2",
     "apollo-errors": "^1.9.0",
     "apollo-server-express": "^2.15.1",
     "cuid": "^2.1.8",
@@ -27,5 +27,5 @@
   "devDependencies": {
     "express": "^4.17.1"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/app-graphql"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/app-graphql"
 }

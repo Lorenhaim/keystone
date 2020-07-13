@@ -14,8 +14,8 @@ generating URLs to dynamically transformed images.
 ## Usage
 
 ```javascript
-const { Keystone } = require('@keystonejs/keystone');
-const { Unsplash } = require('@keystonejs/fields');
+const { Keystone } = require('@koikorn/keystone');
+const { Unsplash } = require('@koikorn/fields');
 
 const keystone = new Keystone({...});
 
@@ -176,9 +176,9 @@ The `Unsplash` field exposes a block that can be used in the [content field](/pa
 ### Usage
 
 ```js
-const { Keystone } = require('@keystonejs/keystone');
-const { Content } = require('@keystonejs/field-content');
-const { Unsplash, Text } = require('@keystonejs/fields');
+const { Keystone } = require('@koikorn/keystone');
+const { Content } = require('@koikorn/field-content');
+const { Unsplash, Text } = require('@koikorn/fields');
 
 keystone.createList('Post', {
   fields: {

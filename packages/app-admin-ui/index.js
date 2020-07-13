@@ -165,7 +165,7 @@ class AdminUIApp {
         '*/*': () => {
           // We need to reset the res 'Content-Type' otherwise it gets replaced by the format we've matched on: '*/*'.
           // Returning a wildcard mimetype causes problems if a 'X-Content-Type-Options: nosniff' header is also set.
-          // See.. https://github.com/keystonejs/keystone/issues/2741
+          // See.. https://github.com/lorenhaim/keystone/issues/2741
           const extension = path.extname(req.url);
           if (extension) res.type(extension);
           next();

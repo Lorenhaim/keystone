@@ -1,5 +1,5 @@
-import { MongooseFieldAdapter } from '@keystonejs/adapter-mongoose';
-import { KnexFieldAdapter } from '@keystonejs/adapter-knex';
+import { MongooseFieldAdapter } from '@koikorn/adapter-mongoose';
+import { KnexFieldAdapter } from '@koikorn/adapter-knex';
 import UnsplashAPI, { toJson } from 'unsplash-js';
 import queryString from 'query-string';
 
@@ -245,7 +245,7 @@ export class Unsplash extends Implementation {
     this.unsplash.photos.downloadPhoto(apiResponse);
 
     // NOTE: we need to provide an id for the image to avoid issues with Apollo
-    // More info here: https://github.com/keystonejs/keystone/pull/1799
+    // More info here: https://github.com/lorenhaim/keystone/pull/1799
     return transformImageFromApiToKs5(apiResponse, { includeId: true });
   }
 

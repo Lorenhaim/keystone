@@ -1,6 +1,6 @@
 import { Implementation } from '../../Implementation';
-import { MongooseFieldAdapter } from '@keystonejs/adapter-mongoose';
-import { KnexFieldAdapter } from '@keystonejs/adapter-knex';
+import { MongooseFieldAdapter } from '@koikorn/adapter-mongoose';
+import { KnexFieldAdapter } from '@koikorn/adapter-knex';
 import mongoose from 'mongoose';
 
 // Disabling the getter of mongoose >= 5.1.0

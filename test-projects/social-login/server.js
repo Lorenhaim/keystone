@@ -5,7 +5,7 @@ const {
   FacebookAuthStrategy,
   TwitterAuthStrategy,
   GitHubAuthStrategy,
-} = require('@keystonejs/auth-passport');
+} = require('@koikorn/auth-passport');
 
 const { keystone, apps } = require('./index');
 const { google, facebook, twitter, github, port } = require('./config');

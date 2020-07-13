@@ -3,10 +3,10 @@ const supertest = require('supertest-light');
 const MongoDBMemoryServer = require('mongodb-memory-server-core').default;
 const pFinally = require('p-finally');
 const url = require('url');
-const { Keystone } = require('@keystonejs/keystone');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { KnexAdapter } = require('@keystonejs/adapter-knex');
-const { MongooseAdapter } = require('@keystonejs/adapter-mongoose');
+const { Keystone } = require('@koikorn/keystone');
+const { GraphQLApp } = require('@koikorn/app-graphql');
+const { KnexAdapter } = require('@koikorn/adapter-knex');
+const { MongooseAdapter } = require('@koikorn/adapter-mongoose');
 
 async function setupServer({
   adapterName,

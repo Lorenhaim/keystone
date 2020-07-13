@@ -1,5 +1,5 @@
 {
-  "name": "@keystonejs/app-next",
+  "name": "@koikorn/app-next",
   "description": "KeystoneJS Next.js App.",
   "version": "5.2.0",
   "author": "The KeystoneJS Development Team",
@@ -10,5 +10,5 @@
   "dependencies": {
     "next": "^9.4.4"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/app-next"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/app-next"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@keystonejs/access-control",
+  "name": "@koikorn/access-control",
   "description": "KeystoneJS Access Control parsing and validating utilities.",
   "version": "6.2.0",
   "author": "The KeystoneJS Development Team",
@@ -8,7 +8,7 @@
     "node": ">=10.0.0"
   },
   "dependencies": {
-    "@keystonejs/utils": "^5.2.2"
+    "@koikorn/utils": "^5.2.2"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/access-control"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/access-control"
 }

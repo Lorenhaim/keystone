@@ -6,16 +6,16 @@ title: Admin UI app
 
 # Admin UI app
 
-[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@keystonejs/app-admin-ui)
+[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@koikorn/app-admin-ui)
 
 A KeystoneJS app which provides an Admin UI for content management.
 
 ## Usage
 
 ```js
-const { Keystone } = require('@keystonejs/keystone');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { AdminUIApp } = require('@keystonejs/app-admin-ui');
+const { Keystone } = require('@koikorn/keystone');
+const { GraphQLApp } = require('@koikorn/app-graphql');
+const { AdminUIApp } = require('@koikorn/app-admin-ui');
 
 const keystone = new Keystone({...});
 
@@ -91,7 +91,7 @@ Header components on the Item Details page can be replaced using this hook. Ths 
 > This must return a React component.
 
 ```javascript title=/admin-ui/index.js
-import { ItemId, AddNewItem } '@keystonejs/admin-ui/components/'
+import { ItemId, AddNewItem } '@koikorn/admin-ui/components/'
 export default {
   // re-implement the default AddNewItem and ItemId button + custom text
   listHeaderActions: () => (<div><ItemId /><AddNewItem /><p>Hello world</p></div>),
@@ -105,7 +105,7 @@ Header components on the List page can be replaced using this hook. This replace
 > This must return a React component.
 
 ```javascript title=/admin-ui/index.js
-import { CreateItem } '@keystonejs/admin-ui/components/'
+import { CreateItem } '@koikorn/admin-ui/components/'
 export default {
   // re-implement the default create item button + custom text
   listHeaderActions: () => (<div><CreateItem /><p>Hello world</p></div>),
@@ -119,7 +119,7 @@ Custom Actions component for multiple items in the list can be replaced with thi
 > This must return a React component.
 
 ```javascript title=/admin-ui/index.js
-import { UpdateItems, DeleteItems } '@keystonejs/admin-ui/components/'
+import { UpdateItems, DeleteItems } '@koikorn/admin-ui/components/'
 export default {
   // re-implement the default delete many and update many items buttons + custom text
   listManageActions: () => (<div><UpdateItems /><DeleteItems /><p>Hello world</p></div>),

@@ -1,5 +1,5 @@
-import { Implementation } from '@keystonejs/fields';
-import { KnexFieldAdapter } from '@keystonejs/adapter-knex';
+import { Implementation } from '@koikorn/fields';
+import { KnexFieldAdapter } from '@koikorn/adapter-knex';
 
 export class AutoIncrementImplementation extends Implementation {
   constructor(path, { gqlType, isUnique = true, access = {}, ...config } = {}, context = {}) {

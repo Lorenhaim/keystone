@@ -264,7 +264,7 @@ export const Footer = () => (
     and
     <br />
     amazing{' '}
-    <FooterAnchor href="https://github.com/keystonejs/keystone/graphs/contributors" target="_blank">
+    <FooterAnchor href="https://github.com/lorenhaim/keystone/graphs/contributors" target="_blank">
       contributors
     </FooterAnchor>
   </footer>

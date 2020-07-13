@@ -1,5 +1,5 @@
 ---
-'@keystonejs/keystone': major
+'@koikorn/keystone': major
 ---
 
 Resolver functions for custom queries and mutations no longer recieve a `{ query }` argument. This functionality has been superseded by `context.executeGraphQL()`.

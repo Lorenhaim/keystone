@@ -1,10 +1,10 @@
-const { Text } = require('@keystonejs/fields');
+const { Text } = require('@koikorn/fields');
 const {
   multiAdapterRunners,
   setupServer,
   graphqlRequest,
   networkedGraphqlRequest,
-} = require('@keystonejs/test-utils');
+} = require('@koikorn/test-utils');
 
 const falseFn = () => false;
 

@@ -40,7 +40,7 @@ async function getGatsbyConfig() {
       title: `KeystoneJS`,
       siteUrl: `https://keystonejs.com`,
       description: `A scalable platform and CMS to build Node.js applications.`,
-      twitter: `@keystonejs`,
+      twitter: `@koikorn`,
     },
     plugins: [
       ...packageFilesPlugins,

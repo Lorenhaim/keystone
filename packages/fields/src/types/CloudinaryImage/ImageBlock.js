@@ -1,8 +1,8 @@
 import pluralize from 'pluralize';
-import { importView } from '@keystonejs/build-field-types';
+import { importView } from '@koikorn/build-field-types';
 
-import { Block } from '@keystonejs/field-content/Block';
-import { imageContainer, caption } from '@keystonejs/field-content/blocks';
+import { Block } from '@koikorn/field-content/Block';
+import { imageContainer, caption } from '@koikorn/field-content/blocks';
 import CloudinaryImage from './';
 import SelectType from '../Select';
 import RelationshipType from '../Relationship';

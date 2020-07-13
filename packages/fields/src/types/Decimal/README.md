@@ -15,7 +15,7 @@ See the [Storage section](#storage) for specifics.
 ## Usage
 
 ```js
-const { DateTime, Decimal, Text } = require('@keystonejs/fields');
+const { DateTime, Decimal, Text } = require('@koikorn/fields');
 
 keystone.createList('Payment', {
   fields: {

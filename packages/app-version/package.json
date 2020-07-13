@@ -1,5 +1,5 @@
 {
-  "name": "@keystonejs/app-version",
+  "name": "@koikorn/app-version",
   "description": "KeystoneJS App Version Plugin",
   "version": "1.0.2",
   "author": "The KeystoneJS Development Team",
@@ -8,7 +8,7 @@
     "node": ">=10.0.0"
   },
   "dependencies": {
-    "@keystonejs/access-control": "^6.0.0"
+    "@koikorn/access-control": "^6.0.0"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/app-version"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/app-version"
 }

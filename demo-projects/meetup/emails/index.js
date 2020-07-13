@@ -1,4 +1,4 @@
-const { emailSender } = require('@keystonejs/email');
+const { emailSender } = require('@koikorn/email');
 
 const jsxEmailSender = emailSender.jsx({
   root: __dirname,

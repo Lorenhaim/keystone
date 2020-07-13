@@ -1,10 +1,10 @@
 const { gen, sampleOne } = require('testcheck');
-const { Text, Relationship } = require('@keystonejs/fields');
+const { Text, Relationship } = require('@koikorn/fields');
 const {
   multiAdapterRunners,
   setupServer,
   networkedGraphqlRequest,
-} = require('@keystonejs/test-utils');
+} = require('@koikorn/test-utils');
 
 const alphanumGenerator = gen.alphaNumString.notEmpty();
 

@@ -1,4 +1,4 @@
-const { multiAdapterRunners, authedGraphqlRequest } = require('@keystonejs/test-utils');
+const { multiAdapterRunners, authedGraphqlRequest } = require('@koikorn/test-utils');
 const { FAKE_ID, nameFn, listAccessVariations, setupKeystone } = require('./utils');
 
 // `mongodb-memory-server` downloads a binary on first run in CI, which can take

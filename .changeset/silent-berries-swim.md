@@ -1,5 +1,5 @@
 ---
-'@keystonejs/keystone': major
+'@koikorn/keystone': major
 ---
 
 Removed the method `keystone.executeQuery()`, which has been superseded by `keystone.executeGraphQL()`.

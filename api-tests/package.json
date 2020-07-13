@@ -1,5 +1,5 @@
 {
-  "name": "@keystonejs/api-tests",
+  "name": "@koikorn/api-tests",
   "description": "A set of tests for running against the KeystoneJS API.",
   "private": true,
   "version": "6.0.0",
@@ -8,14 +8,14 @@
   "engines": {
     "node": ">=10.0.0"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/api-tests",
-  "homepage": "https://github.com/keystonejs/keystone",
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/api-tests",
+  "homepage": "https://github.com/lorenhaim/keystone",
   "devDependencies": {
-    "@keystonejs/adapter-knex": "*",
-    "@keystonejs/adapter-mongoose": "*",
-    "@keystonejs/app-graphql": "*",
-    "@keystonejs/keystone": "*",
-    "@keystonejs/session": "*",
+    "@koikorn/adapter-knex": "*",
+    "@koikorn/adapter-mongoose": "*",
+    "@koikorn/app-graphql": "*",
+    "@koikorn/keystone": "*",
+    "@koikorn/session": "*",
     "body-parser": "^1.18.2",
     "cookie-signature": "^1.1.0",
     "globby": "^11.0.0",
@@ -23,10 +23,10 @@
     "testcheck": "^1.0.0-rc.2"
   },
   "dependencies": {
-    "@keystonejs/auth-password": "^5.1.10",
-    "@keystonejs/fields": "^13.0.2",
-    "@keystonejs/test-utils": "^7.0.1",
-    "@keystonejs/utils": "^5.4.2",
+    "@koikorn/auth-password": "^5.1.10",
+    "@koikorn/fields": "^13.0.2",
+    "@koikorn/test-utils": "^7.0.1",
+    "@koikorn/utils": "^5.4.2",
     "date-fns": "^2.14.0",
     "express": "^4.17.1"
   }

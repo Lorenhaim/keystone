@@ -1,4 +1,4 @@
-import { matchFilter } from '@keystonejs/test-utils';
+import { matchFilter } from '@koikorn/test-utils';
 import Text from '../Text';
 import Uuid from './';
 
@@ -25,7 +25,7 @@ export const initItems = () => {
 };
 
 // JM: These tests are Mongo/Mongoose specific due to null handling (filtering and ordering)
-// See https://github.com/keystonejs/keystone/issues/391
+// See https://github.com/lorenhaim/keystone/issues/391
 
 export const filterTests = withKeystone => {
   const match = (keystone, queryArgs, expected) =>

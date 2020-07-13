@@ -1,5 +1,5 @@
-const { Text } = require('@keystonejs/fields');
-const { setupServer } = require('@keystonejs/test-utils');
+const { Text } = require('@koikorn/fields');
+const { setupServer } = require('@koikorn/test-utils');
 const { FixtureGroup, timeQuery, populate, range } = require('../lib/utils');
 
 function setupKeystone(adapterName) {

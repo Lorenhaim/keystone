@@ -1,4 +1,4 @@
-const { multiAdapterRunners, authedGraphqlRequest } = require('@keystonejs/test-utils');
+const { multiAdapterRunners, authedGraphqlRequest } = require('@koikorn/test-utils');
 const {
   FAKE_ID,
   FAKE_ID_2,

@@ -6,7 +6,7 @@ title: GraphQL app
 
 # GraphQL app
 
-[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@keystonejs/app-graphql)
+[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@koikorn/app-graphql)
 
 A KeystoneJS app that creates a GraphQL API and [GraphiQL](https://github.com/graphql/graphiql/blob/master/packages/graphiql/README.md) playground.
 
@@ -17,9 +17,9 @@ For information about writing queries and mutations for KeystoneJS see the [Intr
 ## Usage
 
 ```javascript
-const { Keystone } = require('@keystonejs/keystone');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { AdminUIApp } = require('@keystonejs/app-admin-ui');
+const { Keystone } = require('@koikorn/keystone');
+const { GraphQLApp } = require('@koikorn/app-graphql');
+const { AdminUIApp } = require('@koikorn/app-admin-ui');
 
 module.exports = {
   keystone: new Keystone(),

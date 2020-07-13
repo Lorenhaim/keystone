@@ -1,5 +1,5 @@
 import { AutoIncrementImplementation, KnexAutoIncrementInterface } from './Implementation';
-import { Integer } from '@keystonejs/fields';
+import { Integer } from '@koikorn/fields';
 
 export const AutoIncrement = {
   type: 'AutoIncrement',

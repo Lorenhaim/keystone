@@ -1,13 +1,13 @@
-const { Integer, Text, Relationship } = require('@keystonejs/fields');
+const { Integer, Text, Relationship } = require('@koikorn/fields');
 const {
   multiAdapterRunners,
   setupServer,
   graphqlRequest,
   networkedGraphqlRequest,
-} = require('@keystonejs/test-utils');
+} = require('@koikorn/test-utils');
 const {
   validation: { depthLimit, definitionLimit, fieldLimit },
-} = require('@keystonejs/app-graphql');
+} = require('@koikorn/app-graphql');
 
 function setupKeystone(adapterName) {
   return setupServer({

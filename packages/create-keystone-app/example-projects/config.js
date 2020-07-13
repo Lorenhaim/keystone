@@ -4,16 +4,16 @@ const adapters = {
   MongoDB: {
     name: 'MongoDB',
     file: 'adapter-mongoose.js',
-    dependencies: ['@keystonejs/adapter-mongoose'],
+    dependencies: ['@koikorn/adapter-mongoose'],
     description: 'Connect to a MongoDB database.',
     defaultConfig: name => `mongodb://localhost/${slugify(name)}`,
   },
   PostgreSQL: {
     name: 'PostgreSQL',
     file: 'adapter-knex.js',
-    dependencies: ['@keystonejs/adapter-knex'],
+    dependencies: ['@koikorn/adapter-knex'],
     description: 'Connect to a PostgreSQL database.',
-    removeDependencies: ['@keystonejs/adapter-mongoose'],
+    removeDependencies: ['@koikorn/adapter-mongoose'],
     defaultConfig: name => `postgres://localhost/${slugify(name, { separator: '_' })}`,
   },
 };

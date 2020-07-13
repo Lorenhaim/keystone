@@ -1,6 +1,6 @@
 {
   "name": "@arch-ui/alert",
-  "description": "Alert component as used in @keystonejs Admin UI.",
+  "description": "Alert component as used in @koikorn Admin UI.",
   "version": "0.0.17",
   "author": "Jed Watson",
   "license": "MIT",
@@ -17,5 +17,5 @@
     "@emotion/styled": "^10.0.27"
   },
   "module": "dist/alert.esm.js",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/alert"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/alert"
 }

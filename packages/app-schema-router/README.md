@@ -6,7 +6,7 @@ title: GraphQL Schema Router
 
 # GraphQL Schema Router
 
-[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@keystonejs/app-schema-router)
+[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@koikorn/app-schema-router)
 
 A KeystoneJS App that route requests to different GraphQL schemas.
 
@@ -17,11 +17,11 @@ a `routerId`, which is used to pick between different GraphQL schemas which exis
 ## Usage
 
 ```javascript
-const { Keystone } = require('@keystonejs/keystone');
-const { GraphQLAppPlayground } = require('@keystonejs/app-graphql-playground');
-const { SchemaRouterApp } = require('@keystonejs/app-schema-router');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { AdminUIApp } = require('@keystonejs/app-admin-ui');
+const { Keystone } = require('@koikorn/keystone');
+const { GraphQLAppPlayground } = require('@koikorn/app-graphql-playground');
+const { SchemaRouterApp } = require('@koikorn/app-schema-router');
+const { GraphQLApp } = require('@koikorn/app-graphql');
+const { AdminUIApp } = require('@koikorn/app-admin-ui');
 
 module.exports = {
   keystone: new Keystone(),

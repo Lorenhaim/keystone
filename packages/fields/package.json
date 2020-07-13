@@ -32,13 +32,13 @@
     "@arch-ui/typography": "^0.0.17",
     "@babel/runtime": "^7.8.4",
     "@emotion/core": "^10.0.28",
-    "@keystonejs/access-control": "^6.2.0",
-    "@keystonejs/adapter-knex": "^10.0.2",
-    "@keystonejs/adapter-mongoose": "^8.1.2",
-    "@keystonejs/app-admin-ui": "^7.0.5",
-    "@keystonejs/build-field-types": "^5.2.8",
-    "@keystonejs/field-content": "^7.0.1",
-    "@keystonejs/utils": "^5.4.2",
+    "@koikorn/access-control": "^6.2.0",
+    "@koikorn/adapter-knex": "^10.0.2",
+    "@koikorn/adapter-mongoose": "^8.1.2",
+    "@koikorn/app-admin-ui": "^7.0.5",
+    "@koikorn/build-field-types": "^5.2.8",
+    "@koikorn/field-content": "^7.0.1",
+    "@koikorn/utils": "^5.4.2",
     "@koikorn/utils": "^5.4.2",
     "@primer/octicons-react": "^10.0.0",
     "@sindresorhus/slugify": "^0.11.0",
@@ -75,7 +75,7 @@
     "unsplash-js": "^6.0.0"
   },
   "devDependencies": {
-    "@keystonejs/test-utils": "*"
+    "@koikorn/test-utils": "*"
   },
   "field-types": {
     "entrypoints": [

@@ -10,10 +10,10 @@ const {
   CalendarDay,
   DateTime,
   OEmbed,
-} = require('@keystonejs/fields');
-const { Wysiwyg } = require('@keystonejs/fields-wysiwyg-tinymce');
-const { AuthedRelationship } = require('@keystonejs/fields-authed-relationship');
-const { LocalFileAdapter } = require('@keystonejs/file-adapters');
+} = require('@koikorn/fields');
+const { Wysiwyg } = require('@koikorn/fields-wysiwyg-tinymce');
+const { AuthedRelationship } = require('@koikorn/fields-authed-relationship');
+const { LocalFileAdapter } = require('@koikorn/file-adapters');
 const { formatISO } = require('date-fns');
 
 const { staticRoute, staticPath, distDir } = require('./config');
@@ -22,7 +22,7 @@ const dev = process.env.NODE_ENV !== 'production';
 let iframelyAdapter;
 
 if (process.env.IFRAMELY_API_KEY) {
-  const { IframelyOEmbedAdapter } = require('@keystonejs/oembed-adapters');
+  const { IframelyOEmbedAdapter } = require('@koikorn/oembed-adapters');
   iframelyAdapter = new IframelyOEmbedAdapter({
     apiKey: process.env.IFRAMELY_API_KEY,
   });

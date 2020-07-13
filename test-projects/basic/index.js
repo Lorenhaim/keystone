@@ -1,4 +1,4 @@
-const { Keystone } = require('@keystonejs/keystone');
+const { Keystone } = require('@koikorn/keystone');
 const {
   File,
   Text,
@@ -17,18 +17,18 @@ const {
   Slug,
   Unsplash,
   Virtual,
-} = require('@keystonejs/fields');
-const { Content } = require('@keystonejs/field-content');
-const { CloudinaryAdapter, LocalFileAdapter } = require('@keystonejs/file-adapters');
-const { Markdown } = require('@keystonejs/fields-markdown');
-const { Wysiwyg } = require('@keystonejs/fields-wysiwyg-tinymce');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { AdminUIApp } = require('@keystonejs/app-admin-ui');
-const { StaticApp } = require('@keystonejs/app-static');
+} = require('@koikorn/fields');
+const { Content } = require('@koikorn/field-content');
+const { CloudinaryAdapter, LocalFileAdapter } = require('@koikorn/file-adapters');
+const { Markdown } = require('@koikorn/fields-markdown');
+const { Wysiwyg } = require('@koikorn/fields-wysiwyg-tinymce');
+const { GraphQLApp } = require('@koikorn/app-graphql');
+const { AdminUIApp } = require('@koikorn/app-admin-ui');
+const { StaticApp } = require('@koikorn/app-static');
 const { graphql } = require('graphql');
 
 const { staticRoute, staticPath, cloudinary, iframely, unsplash } = require('./config');
-const { IframelyOEmbedAdapter } = require('@keystonejs/oembed-adapters');
+const { IframelyOEmbedAdapter } = require('@koikorn/oembed-adapters');
 const MockOEmbedAdapter = require('./mocks/oembed-adapter');
 
 const LOCAL_FILE_SRC = `${staticPath}/avatars`;
@@ -40,7 +40,7 @@ const { formatISO } = require('date-fns');
 // TODO: Make this work again
 // const SecurePassword = require('./custom-fields/SecurePassword');
 
-const { MongooseAdapter } = require('@keystonejs/adapter-mongoose');
+const { MongooseAdapter } = require('@koikorn/adapter-mongoose');
 
 const keystone = new Keystone({
   adapter: new MongooseAdapter({ mongoUri: 'mongodb://localhost/cypress-test-project' }),

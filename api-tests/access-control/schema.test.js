@@ -1,5 +1,5 @@
-const { multiAdapterRunners, graphqlRequest } = require('@keystonejs/test-utils');
-const { arrayToObject } = require('@keystonejs/utils');
+const { multiAdapterRunners, graphqlRequest } = require('@koikorn/test-utils');
+const { arrayToObject } = require('@koikorn/utils');
 const {
   setupKeystone,
   getStaticListName,

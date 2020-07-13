@@ -1,6 +1,6 @@
 import { Implementation } from '../../Implementation';
-import { MongooseFieldAdapter } from '@keystonejs/adapter-mongoose';
-import { KnexFieldAdapter } from '@keystonejs/adapter-knex';
+import { MongooseFieldAdapter } from '@koikorn/adapter-mongoose';
+import { KnexFieldAdapter } from '@koikorn/adapter-knex';
 import dumbPasswords from 'dumb-passwords';
 
 const bcryptHashRegex = /^\$2[aby]?\$\d{1,2}\$[.\/A-Za-z0-9]{53}$/;

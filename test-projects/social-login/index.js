@@ -1,5 +1,5 @@
-const { Keystone } = require('@keystonejs/keystone');
-const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
+const { Keystone } = require('@koikorn/keystone');
+const { PasswordAuthStrategy } = require('@koikorn/auth-password');
 const {
   File,
   Text,
@@ -8,11 +8,11 @@ const {
   Select,
   Password,
   CloudinaryImage,
-} = require('@keystonejs/fields');
-const { CloudinaryAdapter, LocalFileAdapter } = require('@keystonejs/file-adapters');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { AdminUIApp } = require('@keystonejs/app-admin-ui');
-const { StaticApp } = require('@keystonejs/app-static');
+} = require('@koikorn/fields');
+const { CloudinaryAdapter, LocalFileAdapter } = require('@koikorn/file-adapters');
+const { GraphQLApp } = require('@koikorn/app-graphql');
+const { AdminUIApp } = require('@koikorn/app-admin-ui');
+const { StaticApp } = require('@koikorn/app-static');
 
 const { staticRoute, staticPath, cloudinary, cookieSecret } = require('./config');
 
@@ -20,7 +20,7 @@ const { DISABLE_AUTH } = process.env;
 const LOCAL_FILE_SRC = `${staticPath}/avatars`;
 const LOCAL_FILE_ROUTE = `${staticRoute}/avatars`;
 
-const { MongooseAdapter } = require('@keystonejs/adapter-mongoose');
+const { MongooseAdapter } = require('@koikorn/adapter-mongoose');
 
 const keystone = new Keystone({
   adapter: new MongooseAdapter({ mongoUri: 'mongodb://localhost/cypress-test-project' }),

@@ -1,5 +1,5 @@
-const { upcase, resolveAllKeys, arrayToObject } = require('@keystonejs/utils');
-const { logger } = require('@keystonejs/logger');
+const { upcase, resolveAllKeys, arrayToObject } = require('@koikorn/utils');
+const { logger } = require('@koikorn/logger');
 
 const keystoneLogger = logger('keystone');
 
@@ -36,7 +36,7 @@ const opToType = {
 };
 
 const mapNativeTypeToKeystoneType = (type, listKey, fieldPath) => {
-  const { Text, Checkbox, Float } = require('@keystonejs/fields');
+  const { Text, Checkbox, Float } = require('@koikorn/fields');
 
   const nativeTypeMap = new Map([
     [
@@ -70,7 +70,7 @@ const mapNativeTypeToKeystoneType = (type, listKey, fieldPath) => {
 
   keystoneLogger.warn(
     { nativeType: type, keystoneType, listKey, fieldPath },
-    `Mapped field ${listKey}.${fieldPath} from native JavaScript type '${name}', to '${keystoneType.type.type}' from the @keystonejs/fields package.`
+    `Mapped field ${listKey}.${fieldPath} from native JavaScript type '${name}', to '${keystoneType.type.type}' from the @koikorn/fields package.`
   );
 
   return keystoneType;

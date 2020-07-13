@@ -37,58 +37,58 @@ module.exports = async keystone => {
 
 const initialData = {
   User: [
-    { name: 'Admin User', email: 'admin@keystonejs.com', isAdmin: true, password },
+    { name: 'Admin User', email: 'admin@koikorn.com', isAdmin: true, password },
     {
       name: 'Organiser 1',
-      email: 'organiser1@keystonejs.com',
+      email: 'organiser1@koikorn.com',
       twitterHandle: '@organiser1',
       password,
     },
     {
       name: 'Organiser 2',
-      email: 'organiser2@keystonejs.com',
+      email: 'organiser2@koikorn.com',
       twitterHandle: '@organiser2',
       password,
     },
     {
       name: 'Organiser 3',
-      email: 'organiser3@keystonejs.com',
+      email: 'organiser3@koikorn.com',
       twitterHandle: '@organiser3',
       password,
     },
     {
       name: 'Speaker 1',
-      email: 'speaker1@keystonejs.com',
+      email: 'speaker1@koikorn.com',
       twitterHandle: '@speaker1',
       password,
     },
     {
       name: 'Speaker 2',
-      email: 'speaker2@keystonejs.com',
+      email: 'speaker2@koikorn.com',
       twitterHandle: '@speaker2',
       password,
     },
     {
       name: 'Speaker 3',
-      email: 'speaker3@keystonejs.com',
+      email: 'speaker3@koikorn.com',
       twitterHandle: '@speaker3',
       password,
     },
     {
       name: 'Attendee 1',
-      email: 'attendee1@keystonejs.com',
+      email: 'attendee1@koikorn.com',
       twitterHandle: `@attendee1`,
       password,
     },
     {
       name: 'Attendee 2',
-      email: 'attendee2@keystonejs.com',
+      email: 'attendee2@koikorn.com',
       twitterHandle: `@attendee2`,
       password,
     },
     {
       name: 'Attendee 3',
-      email: 'attendee3@keystonejs.com',
+      email: 'attendee3@koikorn.com',
       twitterHandle: `@attendee3`,
       password,
     },

@@ -6,14 +6,14 @@ title: Next.js app
 
 # Next.js app
 
-[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@keystonejs/app-next)
+[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@koikorn/app-next)
 
 A KeystoneJS app for serving a [Next.js](https://nextjs.org/) application.
 
 ## Usage
 
 ```javascript
-const { NextApp } = require('@keystonejs/app-next');
+const { NextApp } = require('@koikorn/app-next');
 
 module.exports = {
   keystone,

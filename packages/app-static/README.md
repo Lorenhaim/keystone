@@ -6,17 +6,17 @@ title: Static file app
 
 # Static file app
 
-[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@keystonejs/app-static)
+[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@koikorn/app-static)
 
 A KeystoneJS app to serve static files such as images, CSS and JavaScript with support for client side routing.
 
 ## Usage
 
 ```js title=index.js
-const { Keystone } = require('@keystonejs/keystone');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { AdminUIApp } = require('@keystonejs/app-admin-ui');
-const { StaticApp } = require('@keystonejs/app-static');
+const { Keystone } = require('@koikorn/keystone');
+const { GraphQLApp } = require('@koikorn/app-graphql');
+const { AdminUIApp } = require('@koikorn/app-admin-ui');
+const { StaticApp } = require('@koikorn/app-static');
 
 module.exports = {
   keystone: new Keystone(),

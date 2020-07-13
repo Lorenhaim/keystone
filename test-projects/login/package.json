@@ -1,6 +1,6 @@
 {
-  "name": "@keystonejs/cypress-project-login",
-  "description": "A KeystoneJS demo project for integration testing. See @keystonejs/keystone for more.",
+  "name": "@koikorn/cypress-project-login",
+  "description": "A KeystoneJS demo project for integration testing. See @koikorn/keystone for more.",
   "private": true,
   "version": "5.1.12",
   "author": "The KeystoneJS Development Team",
@@ -18,15 +18,15 @@
     "cypress:open": "if [ -f .env ]; then yarn prepare-test-server cypress:open:cmd; else echo \"\nError: Must create a test-projects/login/.env file.\nSee test-projects/login/.env.example for values\n\"; exit 1; fi"
   },
   "dependencies": {
-    "@keystonejs/adapter-mongoose": "^8.1.3",
-    "@keystonejs/app-admin-ui": "^7.0.3",
-    "@keystonejs/app-graphql": "^5.1.8",
-    "@keystonejs/app-static": "^5.1.2",
-    "@keystonejs/auth-password": "^5.1.10",
-    "@keystonejs/fields": "^13.0.0",
-    "@keystonejs/keystone": "^11.1.0",
-    "@keystonejs/list-plugins": "^7.0.1",
-    "@keystonejs/session": "^7.0.0",
+    "@koikorn/adapter-mongoose": "^8.1.3",
+    "@koikorn/app-admin-ui": "^7.0.3",
+    "@koikorn/app-graphql": "^5.1.8",
+    "@koikorn/app-static": "^5.1.2",
+    "@koikorn/auth-password": "^5.1.10",
+    "@koikorn/fields": "^13.0.0",
+    "@koikorn/keystone": "^11.1.0",
+    "@koikorn/list-plugins": "^7.0.1",
+    "@koikorn/session": "^7.0.0",
     "body-parser": "^1.18.2",
     "cross-env": "^7.0.0",
     "express": "^4.17.1"
@@ -42,5 +42,5 @@
     "pino-colada": "^1.6.1",
     "start-server-and-test": "^1.11.0"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/test-projects/login"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/test-projects/login"
 }

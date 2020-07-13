@@ -1,5 +1,5 @@
 import { CalendarDay } from './Implementation';
-import { MockAdapter, MockFieldAdapter } from '@keystonejs/test-utils';
+import { MockAdapter, MockFieldAdapter } from '@koikorn/test-utils';
 
 const mockAdapter = new MockAdapter();
 const mocks = {

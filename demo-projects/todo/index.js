@@ -1,9 +1,9 @@
-const { Keystone } = require('@keystonejs/keystone');
-const { MongooseAdapter } = require('@keystonejs/adapter-mongoose');
-const { Text } = require('@keystonejs/fields');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { AdminUIApp } = require('@keystonejs/app-admin-ui');
-const { StaticApp } = require('@keystonejs/app-static');
+const { Keystone } = require('@koikorn/keystone');
+const { MongooseAdapter } = require('@koikorn/adapter-mongoose');
+const { Text } = require('@koikorn/fields');
+const { GraphQLApp } = require('@koikorn/app-graphql');
+const { AdminUIApp } = require('@koikorn/app-admin-ui');
+const { StaticApp } = require('@koikorn/app-static');
 
 const keystone = new Keystone({
   adapter: new MongooseAdapter({ mongoUri: 'mongodb://localhost/todo' }),

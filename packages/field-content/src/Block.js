@@ -1,7 +1,7 @@
 export class Block {
   constructor() {
     // To be set by a Block if it creates a join table.
-    // Instance of @keystonejs/core#List
+    // Instance of @koikorn/core#List
     this.auxList = undefined;
   }
 

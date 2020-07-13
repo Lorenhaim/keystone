@@ -1,5 +1,5 @@
-const { mergeWhereClause, upcase } = require('@keystonejs/utils');
-const { logger } = require('@keystonejs/logger');
+const { mergeWhereClause, upcase } = require('@koikorn/utils');
+const { logger } = require('@koikorn/logger');
 
 const { throwAccessDenied } = require('../ListTypes/graphqlErrors');
 

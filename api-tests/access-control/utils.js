@@ -1,6 +1,6 @@
-const { setupServer } = require('@keystonejs/test-utils');
-const { Text } = require('@keystonejs/fields');
-const { objMerge } = require('@keystonejs/utils');
+const { setupServer } = require('@koikorn/test-utils');
+const { Text } = require('@koikorn/fields');
+const { objMerge } = require('@koikorn/utils');
 
 const FAKE_ID = { mongoose: '5b3eabd9e9f2e3e4866742ea', knex: 137 };
 const FAKE_ID_2 = { mongoose: '5b3eabd9e9f2e3e4866742eb', knex: 138 };

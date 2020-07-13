@@ -1,6 +1,6 @@
 {
   "name": "@arch-ui/day-picker",
-  "description": "Day Picker UI as used in @keystonejs Admin UI.",
+  "description": "Day Picker UI as used in @koikorn Admin UI.",
   "version": "1.0.1",
   "author": "Jed Watson",
   "license": "MIT",
@@ -27,5 +27,5 @@
     "react-window": "^1.7.0"
   },
   "module": "dist/day-picker.esm.js",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/day-picker"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/day-picker"
 }

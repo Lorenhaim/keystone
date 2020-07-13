@@ -11,9 +11,9 @@ const {
   zipObj,
   createLazyDeferred,
   arrayToObject,
-} = require('@keystonejs/utils');
-const { parseListAccess } = require('@keystonejs/access-control');
-const { logger } = require('@keystonejs/logger');
+} = require('@koikorn/utils');
+const { parseListAccess } = require('@koikorn/access-control');
+const { logger } = require('@koikorn/logger');
 const {
   preventInvalidUnderscorePrefix,
   keyToLabel,

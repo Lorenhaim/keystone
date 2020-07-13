@@ -11,7 +11,7 @@ A basic but versatile text field of arbitrary length.
 ## Usage
 
 ```js
-const { Text } = require('@keystonejs/fields');
+const { Text } = require('@koikorn/fields');
 
 keystone.createList('Product', {
   fields: {

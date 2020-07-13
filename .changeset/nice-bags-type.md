@@ -1,8 +1,8 @@
 ---
-'@keystonejs/fields': major
-'@keystonejs/keystone': major
-'@keystonejs/api-tests': patch
-'@keystonejs/demo-custom-fields': patch
+'@koikorn/fields': major
+'@koikorn/keystone': major
+'@koikorn/api-tests': patch
+'@koikorn/demo-custom-fields': patch
 ---
 
 Hooks no longer recieve a `{ query }` argument. This functionality has been superseded by `context.executeGraphQL()`.

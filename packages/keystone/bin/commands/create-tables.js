@@ -2,7 +2,7 @@ const path = require('path');
 const chalk = require('chalk');
 const { DEFAULT_ENTRY } = require('../../constants');
 const { getEntryFileFullPath } = require('../utils');
-const { asyncForEach } = require('@keystonejs/utils');
+const { asyncForEach } = require('@koikorn/utils');
 
 const createTables = async (args, entryFile, spinner) => {
   // Allow the spinner time to flush its output to the console.

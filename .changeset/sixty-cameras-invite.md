@@ -1,6 +1,6 @@
 ---
-'@keystonejs/adapter-knex': major
-'@keystonejs/adapter-mongoose': major
+'@koikorn/adapter-knex': major
+'@koikorn/adapter-mongoose': major
 'create-keystone-app': patch
 ---
 

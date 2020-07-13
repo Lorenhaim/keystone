@@ -1,4 +1,4 @@
-const { resolveAllKeys, mapKeys } = require('@keystonejs/utils');
+const { resolveAllKeys, mapKeys } = require('@koikorn/utils');
 
 function isRelationshipField({ list, fieldKey }) {
   return !!list._fields[fieldKey].type.isRelationship;

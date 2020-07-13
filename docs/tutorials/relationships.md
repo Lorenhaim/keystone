@@ -20,7 +20,7 @@ a `relationship`. Tweak the `assignee` field in `Todo.js` to match the following
 Import the `Relationship` field:
 
 ```javascript title=/lists/Todo.js
-const { CalendarDay, Checkbox, Relationship, Text } = require('@keystonejs/fields');
+const { CalendarDay, Checkbox, Relationship, Text } = require('@koikorn/fields');
 ```
 
 Update the field type from `Text` to `Relationship` and provide a `ref` that

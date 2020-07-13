@@ -1,5 +1,5 @@
 {
-  "name": "@keystonejs/auth-password",
+  "name": "@koikorn/auth-password",
   "description": "Provides a basic password authentication strategy.",
   "version": "5.1.10",
   "author": "The KeystoneJS Development Team",
@@ -8,8 +8,8 @@
     "node": ">=10.0.0"
   },
   "dependencies": {
-    "@keystonejs/fields": "^13.0.0",
-    "@keystonejs/session": "^7.0.0"
+    "@koikorn/fields": "^13.0.0",
+    "@koikorn/session": "^7.0.0"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/auth-password"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/auth-password"
 }

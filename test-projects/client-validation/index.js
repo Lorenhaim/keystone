@@ -1,12 +1,12 @@
-const { Keystone } = require('@keystonejs/keystone');
-const { Text, Password, Checkbox } = require('@keystonejs/fields');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { AdminUIApp } = require('@keystonejs/app-admin-ui');
-const { StaticApp } = require('@keystonejs/app-static');
+const { Keystone } = require('@koikorn/keystone');
+const { Text, Password, Checkbox } = require('@koikorn/fields');
+const { GraphQLApp } = require('@koikorn/app-graphql');
+const { AdminUIApp } = require('@koikorn/app-admin-ui');
+const { StaticApp } = require('@koikorn/app-static');
 
 const { staticRoute, staticPath } = require('./config');
 
-const { MongooseAdapter } = require('@keystonejs/adapter-mongoose');
+const { MongooseAdapter } = require('@koikorn/adapter-mongoose');
 
 const keystone = new Keystone({
   adapter: new MongooseAdapter({ mongoUri: 'mongodb://localhost/cypress-test-project' }),

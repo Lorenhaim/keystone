@@ -1,7 +1,7 @@
 {
   "name": "@koikorn/keystone",
   "version": "1.0.0",
-  "description": "<div align=\"center\">   <img src=\"website/static/readme-header.png\" width=\"557\">   <h1>KeystoneJS</h1>   <br>   <p><b>A scalable platform and CMS to build Node.js applications.</b></p>   <p><code>schema => ({ GraphQL, AdminUI })</code></p>   <br>   <p>Keystone comes with first-class GraphQL support, a highly extensible architecture, and a wonderful Admin UI.</p>   <sub>Looking for Keystone v4.x / Keystone Classic? Head over to <a href=\"https://github.com/keystonejs/keystone-classic\"><code>keystone-classic</code></a>.</sub>   <br> </div> <br>",
+  "description": "<div align=\"center\">   <img src=\"website/static/readme-header.png\" width=\"557\">   <h1>KeystoneJS</h1>   <br>   <p><b>A scalable platform and CMS to build Node.js applications.</b></p>   <p><code>schema => ({ GraphQL, AdminUI })</code></p>   <br>   <p>Keystone comes with first-class GraphQL support, a highly extensible architecture, and a wonderful Admin UI.</p>   <sub>Looking for Keystone v4.x / Keystone Classic? Head over to <a href=\"https://github.com/lorenhaim/keystone-classic\"><code>keystone-classic</code></a>.</sub>   <br> </div> <br>",
   "main": ".eslintrc.js",
   "directories": {
     "doc": "docs"

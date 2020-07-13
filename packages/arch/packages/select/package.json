@@ -1,6 +1,6 @@
 {
   "name": "@arch-ui/select",
-  "description": "Select Component used in @keystonejs Admin UI.",
+  "description": "Select Component used in @koikorn Admin UI.",
   "version": "0.1.8",
   "author": "Jed Watson",
   "license": "MIT",
@@ -17,5 +17,5 @@
     "react-select": "^3.1.0"
   },
   "module": "dist/select.esm.js",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/select"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/select"
 }

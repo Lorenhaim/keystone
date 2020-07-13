@@ -1,5 +1,5 @@
 import { Location, MongoLocationInterface, KnexLocationInterface } from './Implementation';
-import { importView } from '@keystonejs/build-field-types';
+import { importView } from '@koikorn/build-field-types';
 
 export default {
   type: 'Location',

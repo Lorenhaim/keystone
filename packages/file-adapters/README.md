@@ -15,7 +15,7 @@ Different contexts are supported by different file adapters. This package contai
 ### Usage
 
 ```javascript
-const { LocalFileAdapter } = require('@keystonejs/file-adapters');
+const { LocalFileAdapter } = require('@koikorn/file-adapters');
 
 const fileAdapter = new LocalFileAdapter({...});
 ```
@@ -38,7 +38,7 @@ const fileAdapter = new LocalFileAdapter({...});
 Takes a `file` object (such as the one returned in file field hooks) and deletes that file from disk.
 
 ```js
-const { File } = require('@keystonejs/fields');
+const { File } = require('@koikorn/fields');
 
 const fileAdapter = new LocalFileAdapter({
   src: './files',
@@ -74,7 +74,7 @@ keystone.createList('UploadTest', {
 ### Usage
 
 ```javascript
-const { CloudinaryAdapter } = require('@keystonejs/file-adapters');
+const { CloudinaryAdapter } = require('@koikorn/file-adapters');
 
 const fileAdapter = new CloudinaryAdapter({...});
 ```
@@ -99,7 +99,7 @@ Deletes the provided file from cloudinary. Takes a `file` object (such as the on
 ### Usage
 
 ```javascript
-const { S3Adapter } = require('@keystonejs/file-adapters');
+const { S3Adapter } = require('@koikorn/file-adapters');
 
 const CF_DISTRIBUTION_ID = 'cloudfront-distribution-id';
 const S3_PATH = 'uploads';

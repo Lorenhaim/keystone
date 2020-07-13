@@ -1,6 +1,6 @@
 {
   "name": "@arch-ui/confirm",
-  "description": "Confirmation UI as used in @keystonejs Admin UI.",
+  "description": "Confirmation UI as used in @koikorn Admin UI.",
   "version": "0.0.19",
   "author": "Jed Watson",
   "license": "MIT",
@@ -23,5 +23,5 @@
     "react-scrolllock": "^4.0.1"
   },
   "module": "dist/confirm.esm.js",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/confirm"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/confirm"
 }

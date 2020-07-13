@@ -1,8 +1,8 @@
 import memoizeOne from 'memoize-one';
 import isPromise from 'p-is-promise';
-import { captureSuspensePromises } from '@keystonejs/utils';
+import { captureSuspensePromises } from '@koikorn/utils';
 import { Value } from 'slate';
-import Controller from '@keystonejs/fields/Controller';
+import Controller from '@koikorn/fields/Controller';
 
 import { serialize, deserialize } from '../slate-serializer';
 import { initialValue } from './editor/constants';

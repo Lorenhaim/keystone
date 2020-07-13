@@ -1,5 +1,5 @@
 {
-  "name": "@keystonejs/demo-project-meetup",
+  "name": "@koikorn/demo-project-meetup",
   "description": "An example KeystoneJS project showcasing a Meetup Site.",
   "private": true,
   "version": "6.1.3",
@@ -17,17 +17,17 @@
     "@apollo/react-hooks": "^3.1.5",
     "@apollo/react-ssr": "^3.1.5",
     "@emotion/core": "^10.0.28",
-    "@keystonejs/adapter-mongoose": "^8.1.3",
-    "@keystonejs/app-admin-ui": "^7.0.3",
-    "@keystonejs/app-graphql": "^5.1.8",
-    "@keystonejs/app-next": "^5.2.0",
-    "@keystonejs/auth-password": "^5.1.10",
-    "@keystonejs/email": "^5.1.5",
-    "@keystonejs/fields": "^13.0.1",
-    "@keystonejs/fields-wysiwyg-tinymce": "^5.3.1",
-    "@keystonejs/file-adapters": "^7.0.0",
-    "@keystonejs/keystone": "^11.1.1",
-    "@keystonejs/session": "^7.0.0",
+    "@koikorn/adapter-mongoose": "^8.1.3",
+    "@koikorn/app-admin-ui": "^7.0.3",
+    "@koikorn/app-graphql": "^5.1.8",
+    "@koikorn/app-next": "^5.2.0",
+    "@koikorn/auth-password": "^5.1.10",
+    "@koikorn/email": "^5.1.5",
+    "@koikorn/fields": "^13.0.1",
+    "@koikorn/fields-wysiwyg-tinymce": "^5.3.1",
+    "@koikorn/file-adapters": "^7.0.0",
+    "@koikorn/keystone": "^11.1.1",
+    "@koikorn/session": "^7.0.0",
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-client": "^2.6.10",
     "apollo-upload-client": "^13.0.0",
@@ -50,5 +50,5 @@
     "react-use-form-state": "^0.12.0",
     "uuid": "^7.0.3"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/demo-projects/meetup"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/demo-projects/meetup"
 }

@@ -1,5 +1,5 @@
 const express = require('express');
-const { GraphQLPlaygroundApp } = require('@keystonejs/app-graphql-playground');
+const { GraphQLPlaygroundApp } = require('@koikorn/app-graphql-playground');
 const { createApolloServer } = require('./lib/apolloServer');
 const validation = require('./validation');
 

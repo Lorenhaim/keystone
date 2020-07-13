@@ -7,7 +7,7 @@ Adds `createdAt` and `updatedAt` fields to a list. These fields are read-only by
 ## Usage
 
 ```js
-const { atTracking } = require('@keystonejs/list-plugins');
+const { atTracking } = require('@koikorn/list-plugins');
 
 keystone.createList('ListWithPlugin', {
   fields: {
@@ -47,7 +47,7 @@ By default access control on at tracking fields is read only:
 You can import _either_ `createdAt` or `updatedAt` to apply a single tracking field:
 
 ```javascript
-const { createdAt, updatedAt } = require('@keystonejs/list-plugins');
+const { createdAt, updatedAt } = require('@koikorn/list-plugins');
 ```
 
 _Note_: The API is the same.
@@ -59,7 +59,7 @@ Adds `createdBy` and `updatedBy` fields to a list. These fields are read-only by
 ## Usage
 
 ```js
-const { byTracking } = require('@keystonejs/list-plugins');
+const { byTracking } = require('@koikorn/list-plugins');
 
 keystone.createList('ListWithPlugin', {
   fields: {
@@ -99,7 +99,7 @@ By default access control on at tracking fields is read only:
 You can import _either_ `createdBy` or `updatedBy` to apply a single tracking field:
 
 ```javascript
-const { createdBy, updatedBy } = require('@keystonejs/list-plugins');
+const { createdBy, updatedBy } = require('@koikorn/list-plugins');
 ```
 
 _Note_: The API is the same.
@@ -111,7 +111,7 @@ This plugin makes a list singleton by allowing only one item in the list. Useful
 ## Usage
 
 ```js
-const { singleton } = require('@keystonejs/list-plugins');
+const { singleton } = require('@koikorn/list-plugins');
 
 keystone.createList('ListWithPlugin', {
   fields: {...},

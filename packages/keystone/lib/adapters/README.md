@@ -149,7 +149,7 @@ keystone.createList('User', {
 The recommended mechanism for customising the field type adapter is to create a new field type which overrides a specific field adapter mapping.
 
 ```js
-import { Text } from '@keystonejs/fields';
+import { Text } from '@koikorn/fields';
 
 const CustomText = {
   ...Text,

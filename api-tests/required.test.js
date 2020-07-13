@@ -1,6 +1,6 @@
 const globby = require('globby');
-const { multiAdapterRunners, setupServer, graphqlRequest } = require('@keystonejs/test-utils');
-const { Text } = require('@keystonejs/fields');
+const { multiAdapterRunners, setupServer, graphqlRequest } = require('@koikorn/test-utils');
+const { Text } = require('@koikorn/fields');
 
 describe('Test isRequired flag for all field types', () => {
   const testModules = globby.sync(`packages/fields/src/types/**/test-fixtures.js`, {

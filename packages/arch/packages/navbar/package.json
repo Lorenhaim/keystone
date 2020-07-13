@@ -1,6 +1,6 @@
 {
   "name": "@arch-ui/navbar",
-  "description": "Navbar UI as used in @keystonejs Admin UI.",
+  "description": "Navbar UI as used in @koikorn Admin UI.",
   "version": "0.1.11",
   "author": "Jed Watson",
   "license": "MIT",
@@ -20,5 +20,5 @@
     "react-router-dom": "5.2.0"
   },
   "module": "dist/navbar.esm.js",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/navbar"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/navbar"
 }

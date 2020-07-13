@@ -6,7 +6,7 @@ title: OEmbed adapters
 
 # OEmbed adapters
 
-The `OEmbed` field type (from `@keystonejs/fields`) can fetch oEmbed data
+The `OEmbed` field type (from `@koikorn/fields`) can fetch oEmbed data
 from a number of providers such as [Iframely](https://iframely.com).
 
 This package contains adapters for different providers.
@@ -14,9 +14,9 @@ This package contains adapters for different providers.
 ## `IframelyOEmbedAdapter`
 
 ```javascript
-const { Keystone } = require('@keystonejs/keystone');
-const { OEmbed } = require('@keystonejs/fields');
-const { IframelyOEmbedAdapter } = require('@keystonejs/oembed-adapters');
+const { Keystone } = require('@koikorn/keystone');
+const { OEmbed } = require('@koikorn/fields');
+const { IframelyOEmbedAdapter } = require('@koikorn/oembed-adapters');
 
 const keystone = new Keystone(/* ... */);
 

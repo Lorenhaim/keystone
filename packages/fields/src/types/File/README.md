@@ -18,13 +18,13 @@ Support files hosted in a range of different contexts, e.g. in the local filesys
 > }
 > ```
 >
-> You can track this issue [here](https://github.com/keystonejs/keystone/issues/2101).
+> You can track this issue [here](https://github.com/lorenhaim/keystone/issues/2101).
 
 ## Usage
 
 ```js
-const { File } = require('@keystonejs/fields');
-const { LocalFileAdapter } = require('@keystonejs/file-adapters');
+const { File } = require('@koikorn/fields');
+const { LocalFileAdapter } = require('@koikorn/file-adapters');
 
 const fileAdapter = new LocalFileAdapter({
   /*...config */

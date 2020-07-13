@@ -1,5 +1,5 @@
 ---
-'@keystonejs/app-admin-ui': patch
+'@koikorn/app-admin-ui': patch
 ---
 
 **Fix**

@@ -1,6 +1,6 @@
 {
   "name": "@arch-ui/popout",
-  "description": "Popout Component used in @keystonejs Admin UI.",
+  "description": "Popout Component used in @koikorn Admin UI.",
   "version": "0.0.19",
   "author": "Jed Watson",
   "license": "MIT",
@@ -25,5 +25,5 @@
     "react-popper": "^2.2.2"
   },
   "module": "dist/popout.esm.js",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/popout"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/popout"
 }

@@ -1,6 +1,6 @@
 ---
-'@keystonejs/app-graphql': major
-'@keystonejs/keystone': major
+'@koikorn/app-graphql': major
+'@koikorn/keystone': major
 ---
 
 Replaced `keystone.getGraphQlContext()` with `keystone.createHTTPContext()`, to be used primarily by the Apollo server.

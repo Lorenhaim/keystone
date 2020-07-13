@@ -1,5 +1,5 @@
 {
-  "name": "@keystonejs/session",
+  "name": "@koikorn/session",
   "description": "Tools to assist with setting up session management in your Keystone system.",
   "version": "7.0.1",
   "author": "The KeystoneJS Development Team",
@@ -14,5 +14,5 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/session"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/session"
 }

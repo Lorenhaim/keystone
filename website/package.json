@@ -1,11 +1,11 @@
 {
-  "name": "@keystonejs/website",
+  "name": "@koikorn/website",
   "description": "KeystoneJS documentation. Powered by Gatsby.",
   "private": true,
   "version": "5.3.5",
   "author": "The KeystoneJS Development Team",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/website",
-  "homepage": "https://github.com/keystonejs/keystone",
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/website",
+  "homepage": "https://github.com/lorenhaim/keystone",
   "license": "MIT",
   "engines": {
     "node": ">=10.0.0"

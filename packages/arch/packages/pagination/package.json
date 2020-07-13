@@ -1,6 +1,6 @@
 {
   "name": "@arch-ui/pagination",
-  "description": "Pagination UI as used in @keystonejs Admin UI.",
+  "description": "Pagination UI as used in @koikorn Admin UI.",
   "version": "0.0.23",
   "author": "Jed Watson",
   "license": "MIT",
@@ -23,5 +23,5 @@
     "react-router-dom": "5.2.0"
   },
   "module": "dist/pagination.esm.js",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/pagination"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/pagination"
 }

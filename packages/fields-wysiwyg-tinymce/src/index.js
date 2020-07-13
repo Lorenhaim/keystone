@@ -1,7 +1,7 @@
 import { dirname } from 'path';
 import express from 'express';
-import { Text } from '@keystonejs/fields';
-import { importView } from '@keystonejs/build-field-types';
+import { Text } from '@koikorn/fields';
+import { importView } from '@koikorn/build-field-types';
 import { WysiwygImplementation } from './Implementation';
 
 function prepareMiddleware() {

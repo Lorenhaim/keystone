@@ -16,5 +16,5 @@
     "@babel/runtime": "^7.8.4",
     "resize-observer-polyfill": "^1.5.1"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/hooks"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/hooks"
 }

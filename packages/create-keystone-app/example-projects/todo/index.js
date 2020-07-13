@@ -1,11 +1,11 @@
-const { Keystone } = require('@keystonejs/keystone');
-const { Text } = require('@keystonejs/fields');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { AdminUIApp } = require('@keystonejs/app-admin-ui');
-const { StaticApp } = require('@keystonejs/app-static');
+const { Keystone } = require('@koikorn/keystone');
+const { Text } = require('@koikorn/fields');
+const { GraphQLApp } = require('@koikorn/app-graphql');
+const { AdminUIApp } = require('@koikorn/app-admin-ui');
+const { StaticApp } = require('@koikorn/app-static');
 
 /* keystone-cli: generated-code */
-const { MongooseAdapter: Adapter } = require('@keystonejs/adapter-mongoose');
+const { MongooseAdapter: Adapter } = require('@koikorn/adapter-mongoose');
 const PROJECT_NAME = 'My KeystoneJS Project';
 const adapterConfig = {};
 /* /keystone-cli: generated-code */

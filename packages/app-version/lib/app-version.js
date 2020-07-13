@@ -1,4 +1,4 @@
-const { parseCustomAccess } = require('@keystonejs/access-control');
+const { parseCustomAccess } = require('@koikorn/access-control');
 
 class AppVersionProvider {
   constructor({ version, access, schemaNames }) {

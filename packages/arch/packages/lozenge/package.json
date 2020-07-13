@@ -1,6 +1,6 @@
 {
   "name": "@arch-ui/lozenge",
-  "description": "Lozenge component as used in @keystonejs Admin UI.",
+  "description": "Lozenge component as used in @koikorn Admin UI.",
   "version": "0.0.16",
   "author": "Jed Watson",
   "license": "MIT",
@@ -18,5 +18,5 @@
     "@emotion/styled": "^10.0.27"
   },
   "module": "dist/lozenge.esm.js",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/lozenge"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/lozenge"
 }

@@ -6,7 +6,7 @@ title: App version plugin
 
 # App version plugin
 
-[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@keystonejs/app-version)
+[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@koikorn/app-version)
 
 This package provides support for including a version string both as an HTTP response header and as a graphQL query.
 
@@ -35,7 +35,7 @@ const keystone = new Keystone({
 It can also be used directly if you would like to manually manage your middleware stack of graphQL providers.
 
 ```javascript
-const { AppVersionProvider, appVersionMiddleware } = require('@keystonejs/app-version');
+const { AppVersionProvider, appVersionMiddleware } = require('@koikorn/app-version');
 
 const version = '1.0.0';
 

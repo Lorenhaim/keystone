@@ -1,5 +1,5 @@
 {
-  "name": "@keystonejs/auth-passport",
+  "name": "@koikorn/auth-passport",
   "description": "Provides Social Authentication Strategies based on PassportJS.",
   "version": "5.2.3",
   "author": "The KeystoneJS Development Team",
@@ -8,8 +8,8 @@
     "node": ">=10.0.0"
   },
   "dependencies": {
-    "@keystonejs/fields": "^13.0.2",
-    "@keystonejs/session": "^7.0.1",
+    "@koikorn/fields": "^13.0.2",
+    "@koikorn/session": "^7.0.1",
     "express": "^4.17.1",
     "nanoassert": "^2.0.0",
     "passport": "^0.4.0",
@@ -19,5 +19,5 @@
     "passport-twitter": "^1.0.4",
     "passport-wordpress": "^0.0.4"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/auth-passport"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/auth-passport"
 }

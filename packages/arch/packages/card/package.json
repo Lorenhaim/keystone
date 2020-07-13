@@ -1,6 +1,6 @@
 {
   "name": "@arch-ui/card",
-  "description": "Card Component used in @keystonejs Admin UI.",
+  "description": "Card Component used in @koikorn Admin UI.",
   "version": "0.0.14",
   "author": "Jed Watson",
   "license": "MIT",
@@ -17,5 +17,5 @@
     "@emotion/core": "^10.0.28"
   },
   "module": "dist/card.esm.js",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/card"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/card"
 }

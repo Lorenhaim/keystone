@@ -1,4 +1,4 @@
-import { Relationship } from '@keystonejs/fields';
+import { Relationship } from '@koikorn/fields';
 
 export class AuthedRelationship extends Relationship.implementation {
   constructor(path, config, meta) {

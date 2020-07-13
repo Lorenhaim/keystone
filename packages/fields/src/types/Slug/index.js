@@ -1,5 +1,5 @@
 import { SlugImplementation, MongoSlugInterface, KnexSlugInterface } from './Implementation';
-import { importView } from '@keystonejs/build-field-types';
+import { importView } from '@koikorn/build-field-types';
 
 const Slug = {
   type: 'Slug',

@@ -1,6 +1,6 @@
 {
   "name": "@arch-ui/filters",
-  "description": "Filter UI as used in @keystonejs Admin UI.",
+  "description": "Filter UI as used in @koikorn Admin UI.",
   "version": "0.0.19",
   "author": "Jed Watson",
   "license": "MIT",
@@ -20,5 +20,5 @@
     "react-radios": "^1.1.0"
   },
   "module": "dist/filters.esm.js",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/filters"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/filters"
 }

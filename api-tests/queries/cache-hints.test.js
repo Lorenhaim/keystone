@@ -1,9 +1,9 @@
-const { Integer, Text, Relationship } = require('@keystonejs/fields');
+const { Integer, Text, Relationship } = require('@koikorn/fields');
 const {
   multiAdapterRunners,
   setupServer,
   networkedGraphqlRequest,
-} = require('@keystonejs/test-utils');
+} = require('@koikorn/test-utils');
 
 function setupKeystone(adapterName) {
   return setupServer({

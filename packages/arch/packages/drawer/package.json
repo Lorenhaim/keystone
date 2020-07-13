@@ -1,6 +1,6 @@
 {
   "name": "@arch-ui/drawer",
-  "description": "Drawer Portal UI as used in @keystonejs Admin UI.",
+  "description": "Drawer Portal UI as used in @koikorn Admin UI.",
   "version": "0.0.21",
   "author": "Jed Watson",
   "license": "MIT",
@@ -25,5 +25,5 @@
     "react-scrolllock": "^4.0.1"
   },
   "module": "dist/drawer.esm.js",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/drawer"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/drawer"
 }

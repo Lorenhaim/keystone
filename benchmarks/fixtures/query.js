@@ -1,5 +1,5 @@
-const { Text, Relationship } = require('@keystonejs/fields');
-const { setupServer, graphqlRequest } = require('@keystonejs/test-utils');
+const { Text, Relationship } = require('@koikorn/fields');
+const { setupServer, graphqlRequest } = require('@koikorn/test-utils');
 const { FixtureGroup, timeQuery, populate, range } = require('../lib/utils');
 
 function setupKeystone(adapterName) {

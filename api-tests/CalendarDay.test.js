@@ -1,6 +1,6 @@
-const { multiAdapterRunners, setupServer, graphqlRequest } = require('@keystonejs/test-utils');
+const { multiAdapterRunners, setupServer, graphqlRequest } = require('@koikorn/test-utils');
 
-const { CalendarDay } = require('@keystonejs/fields');
+const { CalendarDay } = require('@koikorn/fields');
 
 function setupKeystone(adapterName) {
   return setupServer({

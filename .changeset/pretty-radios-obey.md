@@ -1,5 +1,5 @@
 ---
-'@keystonejs/keystone': patch
+'@koikorn/keystone': patch
 ---
 
 Updated internal access control functions to directly accept access control definition.

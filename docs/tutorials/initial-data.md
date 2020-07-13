@@ -21,12 +21,12 @@ project and start from an empty database (delete data from previous chapters).
 Also, make sure to have all of the following packages installed:
 
 ```shell allowCopy=false showLanguage=false
-yarn add @keystonejs/keystone
-yarn add @keystonejs/adapter-mongoose
-yarn add @keystonejs/app-graphql
-yarn add @keystonejs/fields
-yarn add @keystonejs/app-admin-ui
-yarn add @keystonejs/auth-password
+yarn add @koikorn/keystone
+yarn add @koikorn/adapter-mongoose
+yarn add @koikorn/app-graphql
+yarn add @koikorn/fields
+yarn add @koikorn/app-admin-ui
+yarn add @koikorn/auth-password
 ```
 
 ### Preparation
@@ -34,12 +34,12 @@ yarn add @keystonejs/auth-password
 First let's create a `User` list and add a `PasswordAuthStrategy`. The code in `index.js`:
 
 ```javascript
-const { Keystone } = require('@keystonejs/keystone');
-const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
-const { Text, Checkbox, Password } = require('@keystonejs/fields');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { AdminUIApp } = require('@keystonejs/app-admin-ui');
-const { MongooseAdapter } = require('@keystonejs/adapter-mongoose');
+const { Keystone } = require('@koikorn/keystone');
+const { PasswordAuthStrategy } = require('@koikorn/auth-password');
+const { Text, Checkbox, Password } = require('@koikorn/fields');
+const { GraphQLApp } = require('@koikorn/app-graphql');
+const { AdminUIApp } = require('@koikorn/app-admin-ui');
+const { MongooseAdapter } = require('@koikorn/adapter-mongoose');
 
 const keystone = new Keystone({
   adapter: new MongooseAdapter(),
@@ -121,7 +121,7 @@ by using the Keystone query syntax.
 Add the `Relationship` field to the imports:
 
 ```javascript
-const { Text, Checkbox, Password, Relationship } = require('@keystonejs/fields');
+const { Text, Checkbox, Password, Relationship } = require('@koikorn/fields');
 ```
 
 Create a list with a relationship to another list:

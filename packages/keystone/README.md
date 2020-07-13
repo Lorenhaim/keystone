@@ -9,7 +9,7 @@ order: 1
 ## Usage
 
 ```javascript
-const { Keystone } = require('@keystonejs/keystone');
+const { Keystone } = require('@koikorn/keystone');
 
 const keystone = new Keystone({
   adapter,

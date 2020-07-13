@@ -1,6 +1,6 @@
 {
   "name": "@arch-ui/input",
-  "description": "Input component as used in @keystonejs Admin UI.",
+  "description": "Input component as used in @koikorn Admin UI.",
   "version": "0.1.10",
   "author": "Jed Watson",
   "license": "MIT",
@@ -19,5 +19,5 @@
     "@emotion/core": "^10.0.28"
   },
   "module": "dist/input.esm.js",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/input"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/input"
 }

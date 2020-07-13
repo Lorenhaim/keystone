@@ -8,11 +8,11 @@ title: A new data schema
 > **Note:** This document refers to a set of package releases which are all part of one Keystone release.
 > These package releases are collectively known as the `Arcade` release of Keystone. The packages included are:
 >
-> - `@keystonejs/adapter-knex`: `9.0.0`
-> - `@keystonejs/adapter-mongoose`: `8.0.0`
-> - `@keystonejs/fields`: `9.0.0`
-> - `@keystonejs/keystone`: `8.0.0`
-> - `@keystonejs/mongo-join-builder`: `7.0.0`
+> - `@koikorn/adapter-knex`: `9.0.0`
+> - `@koikorn/adapter-mongoose`: `8.0.0`
+> - `@koikorn/fields`: `9.0.0`
+> - `@koikorn/keystone`: `8.0.0`
+> - `@koikorn/mongo-join-builder`: `7.0.0`
 
 We are excited to announce a **new and improved data schema** for Keystone.
 The new data schema simplifies the way your data is stored and will unlock the development of new functionality within Keystone.
@@ -31,7 +31,7 @@ In particular, we have come a long way with our support for complex relationship
 By keeping a consistent schema, users have been able to stay up to date with Keystone updates without having to make changes to their data.
 
 Unfortunately we have now outgrown this original schema.
-More and more we are finding that [certain bugs](https://github.com/keystonejs/keystone/issues/1362) are hard to fix, and [certain features](https://github.com/keystonejs/keystone/issues/313) difficult to implement, because of the limitations of our initial design.
+More and more we are finding that [certain bugs](https://github.com/lorenhaim/keystone/issues/1362) are hard to fix, and [certain features](https://github.com/lorenhaim/keystone/issues/313) difficult to implement, because of the limitations of our initial design.
 While it has served us well, it's time for an upgrade.
 
 ## The problem
@@ -47,7 +47,7 @@ This means we stored duplicated data in the database, but we could very quickly 
 Unfortunately, this trade off is no longer working in our favour.
 Maintaining the denormalised data is now more complex than generating queries against normalised data.
 We are finding that some reported bugs are difficult to resolve due to the complex nature of resolving denormalised data.
-There are also more sophisticated relationship patterns, such as [ordered relationships](https://github.com/keystonejs/keystone/issues/313), which are too difficult to implement in the current schema.
+There are also more sophisticated relationship patterns, such as [ordered relationships](https://github.com/lorenhaim/keystone/issues/313), which are too difficult to implement in the current schema.
 
 ## The solution
 

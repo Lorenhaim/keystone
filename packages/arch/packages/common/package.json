@@ -1,6 +1,6 @@
 {
   "name": "@arch-ui/common",
-  "description": "Common config used throughout @arch-ui Components and @keystonejs Admin UI.",
+  "description": "Common config used throughout @arch-ui Components and @koikorn Admin UI.",
   "version": "0.0.11",
   "author": "Jed Watson",
   "license": "MIT",
@@ -9,5 +9,5 @@
     "@arch-ui/theme": "^0.0.10"
   },
   "module": "dist/common.esm.js",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/common"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/common"
 }

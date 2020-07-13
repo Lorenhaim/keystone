@@ -1,5 +1,5 @@
-const { multiAdapterRunners, setupServer, graphqlRequest } = require('@keystonejs/test-utils');
-const { Integer, Virtual } = require('@keystonejs/fields');
+const { multiAdapterRunners, setupServer, graphqlRequest } = require('@koikorn/test-utils');
+const { Integer, Virtual } = require('@koikorn/fields');
 
 function makeSetupKeystone(fields) {
   return function setupKeystone(adapterName) {

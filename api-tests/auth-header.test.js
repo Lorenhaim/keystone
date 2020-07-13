@@ -1,7 +1,7 @@
-const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
-const { Text, Password, DateTime } = require('@keystonejs/fields');
-const { multiAdapterRunners, networkedGraphqlRequest } = require('@keystonejs/test-utils');
-const { setupServer } = require('@keystonejs/test-utils');
+const { PasswordAuthStrategy } = require('@koikorn/auth-password');
+const { Text, Password, DateTime } = require('@koikorn/fields');
+const { multiAdapterRunners, networkedGraphqlRequest } = require('@koikorn/test-utils');
+const { setupServer } = require('@koikorn/test-utils');
 
 const initialData = {
   User: [

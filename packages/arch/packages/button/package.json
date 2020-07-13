@@ -1,6 +1,6 @@
 {
   "name": "@arch-ui/button",
-  "description": "Button Components as used in @keystonejs Admin UI.",
+  "description": "Button Components as used in @koikorn Admin UI.",
   "version": "0.0.20",
   "author": "Jed Watson",
   "license": "MIT",
@@ -23,5 +23,5 @@
     "react-router-dom": "5.2.0"
   },
   "module": "dist/button.esm.js",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/arch/packages/button"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/arch/packages/button"
 }

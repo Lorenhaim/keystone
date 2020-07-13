@@ -6,12 +6,12 @@ title: Nuxt.js app
 
 # Nuxt.js app
 
-[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@keystonejs/app-nuxt)
+[![View changelog](https://img.shields.io/badge/changelogs.xyz-Explore%20Changelog-brightgreen)](https://changelogs.xyz/@koikorn/app-nuxt)
 
 ## Usage
 
 ```javascript
-const { NuxtApp } = require('@keystonejs/app-nuxt');
+const { NuxtApp } = require('@koikorn/app-nuxt');
 
 const config = {
   srcDir: 'src',

@@ -1,9 +1,9 @@
-const { Keystone } = require('@keystonejs/keystone');
-const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
-const { Text, Password, Select } = require('@keystonejs/fields');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { AdminUIApp } = require('@keystonejs/app-admin-ui');
-const { objMerge } = require('@keystonejs/utils');
+const { Keystone } = require('@koikorn/keystone');
+const { PasswordAuthStrategy } = require('@koikorn/auth-password');
+const { Text, Password, Select } = require('@koikorn/fields');
+const { GraphQLApp } = require('@koikorn/app-graphql');
+const { AdminUIApp } = require('@koikorn/app-admin-ui');
+const { objMerge } = require('@koikorn/utils');
 const {
   getStaticListName,
   getImperativeListName,
@@ -15,7 +15,7 @@ const {
 
 const { projectName } = require('./config');
 
-const { MongooseAdapter } = require('@keystonejs/adapter-mongoose');
+const { MongooseAdapter } = require('@koikorn/adapter-mongoose');
 
 const keystone = new Keystone({
   adapter: new MongooseAdapter({ mongoUri: 'mongodb://localhost/cypress-test-project' }),

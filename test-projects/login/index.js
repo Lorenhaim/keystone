@@ -1,9 +1,9 @@
-const { Keystone } = require('@keystonejs/keystone');
-const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
-const { Text, Password, Relationship, Checkbox } = require('@keystonejs/fields');
-const { MongooseAdapter } = require('@keystonejs/adapter-mongoose');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { AdminUIApp } = require('@keystonejs/app-admin-ui');
+const { Keystone } = require('@koikorn/keystone');
+const { PasswordAuthStrategy } = require('@koikorn/auth-password');
+const { Text, Password, Relationship, Checkbox } = require('@koikorn/fields');
+const { MongooseAdapter } = require('@koikorn/adapter-mongoose');
+const { GraphQLApp } = require('@koikorn/app-graphql');
+const { AdminUIApp } = require('@koikorn/app-admin-ui');
 
 const {
   createdAt,
@@ -12,7 +12,7 @@ const {
   updatedBy,
   atTracking,
   byTracking,
-} = require('@keystonejs/list-plugins');
+} = require('@koikorn/list-plugins');
 
 const defaultAccess = ({ authentication: { item } }) => !!item;
 

@@ -368,7 +368,7 @@ const UserInfo = ({ authListKey, authListPath }) => {
   );
 };
 
-const GITHUB_PROJECT = 'https://github.com/keystonejs/keystone';
+const GITHUB_PROJECT = 'https://github.com/lorenhaim/keystone';
 
 const ActionItems = ({ mouseIsOverNav }) => {
   const { signoutPath, graphiqlPath, authStrategy } = useAdminMeta();

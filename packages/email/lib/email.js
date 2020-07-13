@@ -6,7 +6,7 @@ const fs = require('fs');
 const mjml2html = require('mjml');
 
 // Returns an instance of `keystone-email`:
-// https://github.com/keystonejs/keystone-email
+// https://github.com/lorenhaim/keystone-email
 function jsxFactory({ onRender } = {}) {
   return ({ root, transport, expressReactViewsOptions, engine, ...transportOptions }) => {
     if (!root || !fs.existsSync(root)) {
@@ -67,12 +67,12 @@ const mjmlConfigDefault = {
  * ----
  *
  * Express-compatible renderers should work out of the box (as long as they
- * export an `__express` key). See: https://github.com/keystonejs/keystone-email/issues/8
+ * export an `__express` key). See: https://github.com/lorenhaim/keystone-email/issues/8
  *
  * There is also a `jsx` renderer powered by `express-react-views`.
  *
  * Usage:
- * const { emailSender } = require('@keystonejs/email');
+ * const { emailSender } = require('@koikorn/email');
  *
  * const jsxEmailSender = emailSender.jsx({
  *   // The directory containing the email templates

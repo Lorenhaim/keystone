@@ -13,10 +13,10 @@ const {
   mergeWhereClause,
   resolveAllKeys,
   versionGreaterOrEqualTo,
-} = require('@keystonejs/utils');
+} = require('@koikorn/utils');
 
-const { BaseKeystoneAdapter, BaseListAdapter, BaseFieldAdapter } = require('@keystonejs/keystone');
-const { queryParser, pipelineBuilder } = require('@keystonejs/mongo-join-builder');
+const { BaseKeystoneAdapter, BaseListAdapter, BaseFieldAdapter } = require('@koikorn/keystone');
+const { queryParser, pipelineBuilder } = require('@koikorn/mongo-join-builder');
 
 const debugMongoose = () => !!process.env.DEBUG_MONGOOSE;
 
@@ -125,7 +125,7 @@ class MongooseAdapter extends BaseKeystoneAdapter {
 
   getDefaultPrimaryKeyConfig() {
     // Required here due to circular refs
-    const { MongoId } = require('@keystonejs/fields-mongoid');
+    const { MongoId } = require('@koikorn/fields-mongoid');
     return MongoId.primaryKeyDefaults[this.name].getConfig();
   }
 

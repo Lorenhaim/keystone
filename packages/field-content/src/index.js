@@ -1,5 +1,5 @@
-import { importView } from '@keystonejs/build-field-types';
-import { Text } from '@keystonejs/fields';
+import { importView } from '@koikorn/build-field-types';
+import { Text } from '@koikorn/fields';
 import {
   Content as ContentType,
   MongoContentInterface,

@@ -179,7 +179,7 @@ describe('Testing Login', () => {
       cy.get('body').should('contain', 'Dashboard');
     });
 
-    // See: https://github.com/keystonejs/keystone/issues/2656
+    // See: https://github.com/lorenhaim/keystone/issues/2656
     it.skip('Redirects to requested page after login', () => {
       cy.visit('/admin/users');
 

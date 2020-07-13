@@ -12,15 +12,15 @@ const {
   flatten,
   unique,
   filterValues,
-} = require('@keystonejs/utils');
+} = require('@koikorn/utils');
 const {
   validateFieldAccessControl,
   validateListAccessControl,
   validateCustomAccessControl,
   validateAuthAccessControl,
-} = require('@keystonejs/access-control');
-const { SessionManager } = require('@keystonejs/session');
-const { AppVersionProvider, appVersionMiddleware } = require('@keystonejs/app-version');
+} = require('@koikorn/access-control');
+const { SessionManager } = require('@koikorn/session');
+const { AppVersionProvider, appVersionMiddleware } = require('@koikorn/app-version');
 
 const {
   unmergeRelationships,
@@ -228,7 +228,7 @@ module.exports = class Keystone {
     const schema = this._schemas[context.schemaName];
     if (!schema) {
       throw new Error(
-        `No executable schema named '${context.schemaName}' is available. Have you setup '@keystonejs/app-graphql'?`
+        `No executable schema named '${context.schemaName}' is available. Have you setup '@koikorn/app-graphql'?`
       );
     }
 

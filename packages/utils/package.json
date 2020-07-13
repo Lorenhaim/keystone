@@ -1,6 +1,6 @@
 {
   "name": "@koikorn/utils",
-  "description": "Common utility functions used throughout @keystonejs packages.",
+  "description": "Common utility functions used throughout @koikorn packages.",
   "version": "5.4.2",
   "author": "The KeystoneJS Development Team",
   "license": "MIT",

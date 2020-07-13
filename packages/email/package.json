@@ -1,5 +1,5 @@
 {
-  "name": "@keystonejs/email",
+  "name": "@koikorn/email",
   "description": "Easily send emails from a KeystoneJS application",
   "version": "5.1.5",
   "author": "The KeystoneJS Development Team",
@@ -25,5 +25,5 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/email"
+  "repository": "https://github.com/lorenhaim/keystone/tree/master/packages/email"
 }

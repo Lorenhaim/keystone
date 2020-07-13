@@ -137,7 +137,7 @@ Instead, we can use `mongo-join-builder`!
 _NOTE: This example is incomplete, and only for documentation purposes. See the examples directory for complete examples._
 
 ```javascript
-const { mongoJoinBuilder } = require('@keystonejs/mongo-join-builder');
+const { mongoJoinBuilder } = require('@koikorn/mongo-join-builder');
 const database = require('./my-mongodb-connection');
 
 const builder = mongoJoinBuilder({

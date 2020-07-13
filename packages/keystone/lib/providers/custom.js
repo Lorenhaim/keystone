@@ -1,7 +1,7 @@
 const gql = require('graphql-tag');
-const { parseCustomAccess } = require('@keystonejs/access-control');
-const { objMerge } = require('@keystonejs/utils');
-const { logger } = require('@keystonejs/logger');
+const { parseCustomAccess } = require('@koikorn/access-control');
+const { objMerge } = require('@koikorn/utils');
+const { logger } = require('@koikorn/logger');
 
 const { AccessDeniedError } = require('../ListTypes/graphqlErrors');
 

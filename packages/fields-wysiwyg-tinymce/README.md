@@ -10,12 +10,12 @@ This field inserts a string path into your schema based on the `Text` field type
 
 ## Usage
 
-This package isn't included with the keystone fields package and needs to be installed with `yarn add @keystonejs/fields-wysiwyg-tinymce` or `npm install @keystonejs/fields-wysiwyg-tinymce`
+This package isn't included with the keystone fields package and needs to be installed with `yarn add @koikorn/fields-wysiwyg-tinymce` or `npm install @koikorn/fields-wysiwyg-tinymce`
 
 Then import it, and use it like any other field:
 
 ```js
-const { Wysiwyg } = require('@keystonejs/fields-wysiwyg-tinymce');
+const { Wysiwyg } = require('@koikorn/fields-wysiwyg-tinymce');
 ```
 
 ## Config

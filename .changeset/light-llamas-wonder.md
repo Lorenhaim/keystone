@@ -1,5 +1,5 @@
 ---
-'@keystonejs/demo-project-meetup': patch
+'@koikorn/demo-project-meetup': patch
 ---
 
 Updated usage of Apollo based on Next.js [example](https://github.com/vercel/next.js/blob/canary/examples/with-apollo). 

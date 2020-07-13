@@ -1,4 +1,4 @@
-import { importView } from '@keystonejs/build-field-types';
+import { importView } from '@koikorn/build-field-types';
 import { CalendarDay, MongoCalendarDayInterface, KnexCalendarDayInterface } from './Implementation';
 
 export default {
